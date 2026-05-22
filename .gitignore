@@ -12,6 +12,7 @@ dist
 dist-ssr
 coverage
 *.local
+release/
 public/core/drawio-embed/*
 public/core/busytex/*
 src/plugins/
