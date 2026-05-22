@@ -8,7 +8,9 @@ const __dirname = dirname(__filename);
 
 async function loadConfig() {
 	const configPath = join(__dirname, '..', 'texlyre.config.ts');
-	const { default: config } = await import(configPath);
+	// Convert to file:// URL for Windows compatibility
+	const fileUrl = new URL(`file://${configPath}`).href;
+	const { default: config } = await import(fileUrl);
 	return config;
 }
 
@@ -32,4 +34,5 @@ const updatedContent = swContent
 	);
 
 writeFileSync(swPath, updatedContent);
-console.log(`Updated service worker: version=${version}, basePath=${basePath}`);
+
+console.log(`Updated service worker version to ${version} and base path to ${basePath}`);

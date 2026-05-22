@@ -11,7 +11,9 @@ const rootDir = path.join(__dirname, '..');
 
 async function loadConfig() {
     const configPath = path.join(rootDir, 'texlyre.config.ts');
-    const { default: config } = await import(configPath);
+    // Convert to file:// URL for Windows compatibility
+    const fileUrl = new URL(`file://${configPath}`).href;
+    const { default: config } = await import(fileUrl);
     return config;
 }
 
