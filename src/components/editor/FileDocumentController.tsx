@@ -972,7 +972,7 @@ const FileDocumentControllerContent: React.FC<FileDocumentControllerProps> = ({
   const handleUpdateContent = (content: string) => {
     setCurrentEditorContent(content);
 
-    if (content !== (isEditingFile ? fileContent : content)) {
+    if (isEditingFile && content !== fileContent) {
       onUpdateContent(content);
     }
   };

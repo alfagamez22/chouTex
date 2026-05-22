@@ -791,6 +791,24 @@ const EditorContent: React.FC<{
     );
   };
 
+function CollaborativeViewerWithComments({
+  renderViewer: CollabComponent,
+  ...props
+}: {
+  renderViewer: React.ComponentType<any>;
+  [key: string]: any;
+}) {
+  const { parseComments, addComment, updateComments } = useComments();
+  return (
+    <CollabComponent
+      {...props}
+      parseComments={parseComments}
+      addComment={addComment}
+      updateComments={updateComments}
+    />
+  );
+}
+
 const Editor: React.FC<EditorComponentProps> = ({
   content,
   documentId,
@@ -1024,7 +1042,8 @@ const Editor: React.FC<EditorComponentProps> = ({
                 {collaborativeViewerPlugin.version}
               </span>
             </div>
-            <CollaborativeViewerComponent
+            <CollaborativeViewerWithComments
+              renderViewer={CollaborativeViewerComponent}
               fileId={fileId}
               content={content as ArrayBuffer}
               mimeType={mimeType}
@@ -1033,18 +1052,6 @@ const Editor: React.FC<EditorComponentProps> = ({
               documentId={documentId}
               isDocumentSelected={isDocumentSelected}
               onUpdateContent={onUpdateContent}
-              parseComments={(text: string) => {
-                const { parseComments } = useComments();
-                return parseComments(text);
-              }}
-              addComment={(content: string) => {
-                const { addComment } = useComments();
-                return addComment(content);
-              }}
-              updateComments={(content: string) => {
-                const { updateComments } = useComments();
-                updateComments(content);
-              }}
             />
           </div>
           <CommentModal

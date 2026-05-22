@@ -151,8 +151,6 @@ class FilePathCacheService {
 					cache.videoFiles.push(node.path);
 				} else if (ext && audioExtensions.has(ext)) {
 					cache.audioFiles.push(node.path);
-				} else if (ext && imageExtensions.has(ext)) {
-					cache.imageFiles.push(node.path);
 				} else if (isBibFile(node.name)) {
 					cache.bibFiles.push(node.path);
 				} else if (isLatexFile(node.name)) {
