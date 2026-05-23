@@ -1,5 +1,5 @@
-import { BusyTeXEngine } from '@src/extensions/texlyre-busytex/BusyTeXEngine';
-import { busyTexService, BUSYTEX_BUNDLE_URLS } from '@src/extensions/texlyre-busytex/BusyTeXService';
+import { BusyTeXEngine } from '@src/extensions/choutex-busytex/BusyTeXEngine';
+import { busyTexService, BUSYTEX_BUNDLE_URLS } from '@src/extensions/choutex-busytex/BusyTeXService';
 import { latexSourceMapService } from '@src/services/LaTeXSourceMapService';
 import { fileStorageService } from '@src/services/FileStorageService';
 import type { FileNode } from '@src/types/files';
@@ -276,7 +276,7 @@ describe('BusyTeXService', () => {
 
     describe('setSelectedBundles', () => {
         it('maps bundle IDs to URLs', () => {
-            const spy = jest.spyOn(require('@src/extensions/texlyre-busytex/BusyTeXEngine').busyTeXEngine, 'setSelectedBundles');
+            const spy = jest.spyOn(require('@src/extensions/choutex-busytex/BusyTeXEngine').busyTeXEngine, 'setSelectedBundles');
             busyTexService.setSelectedBundles(['basic', 'recommended']);
             expect(spy).toHaveBeenCalledWith([
                 BUSYTEX_BUNDLE_URLS['basic'],
@@ -285,7 +285,7 @@ describe('BusyTeXService', () => {
         });
 
         it('ignores unknown bundle IDs', () => {
-            const spy = jest.spyOn(require('@src/extensions/texlyre-busytex/BusyTeXEngine').busyTeXEngine, 'setSelectedBundles');
+            const spy = jest.spyOn(require('@src/extensions/choutex-busytex/BusyTeXEngine').busyTeXEngine, 'setSelectedBundles');
             busyTexService.setSelectedBundles(['nonexistent']);
             expect(spy).toHaveBeenCalledWith([]);
         });

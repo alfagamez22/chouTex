@@ -1,6 +1,6 @@
-# TeXlyre Plugin System
+# chouTex Plugin System
 
-This directory contains plugins for the TeXlyre editor. The plugin system allows for extending TeXlyre functionality without modifying the core codebase.
+This directory contains plugins for the chouTex editor. The plugin system allows for extending chouTex functionality without modifying the core codebase.
 
 ## Plugin Types
 
@@ -39,7 +39,7 @@ import { ViewerPlugin } from '@/plugins/PluginInterface';
 import MyViewer from './MyViewer';
 
 const myViewerPlugin: ViewerPlugin = {
-  id: 'texlyre-my-viewer',
+  id: 'choutex-my-viewer',
   name: 'My Viewer',
   version: '1.0.0',
   type: 'viewer',

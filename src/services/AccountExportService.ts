@@ -16,7 +16,7 @@ export interface ExportOptions {
 	includeTemporaryFiles?: boolean;
 	includeUserData?: boolean;
 	projectIds?: string[];
-	format?: 'texlyre' | 'files-only';
+	format?: 'choutex' | 'files-only';
 	isSingleProjectExport?: boolean;
 }
 
@@ -36,7 +36,7 @@ class AccountExportService {
 			includeFiles: true,
 			includeTemporaryFiles: false,
 			includeUserData,
-			format: 'texlyre',
+			format: 'choutex',
 		};
 
 		const currentProjectId = exportAllProjects
@@ -65,7 +65,7 @@ class AccountExportService {
 			includeFiles: true,
 			includeTemporaryFiles: false,
 			includeUserData: false,
-			format: 'texlyre',
+			format: 'choutex',
 			...options,
 			projectIds,
 			isSingleProjectExport: projectIds.length === 1,
@@ -181,8 +181,8 @@ class AccountExportService {
 			let fileName: string;
 			if (options.includeAccount) {
 				fileName = options.projectIds
-					? `texlyre-project-export-${timestamp}.zip`
-					: `texlyre-account-export-${timestamp}.zip`;
+					? `choutex-project-export-${timestamp}.zip`
+					: `choutex-account-export-${timestamp}.zip`;
 			} else {
 				if (options.format === 'files-only' && options.isSingleProjectExport) {
 					const projectName =
@@ -194,7 +194,7 @@ class AccountExportService {
 					const formatSuffix =
 						options.format === 'files-only'
 							? 'latex-files'
-							: 'texlyre-projects-';
+							: 'choutex-projects-';
 					fileName = `${formatSuffix}-${timestamp}.zip`;
 				}
 			}

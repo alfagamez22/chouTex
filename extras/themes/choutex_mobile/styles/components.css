@@ -1,0 +1,382 @@
+/* extras/themes/choutex_mobile/styles/components.css */
+
+[data-layout="choutex-mobile"] .editor-tabs-container {
+	min-height: var(--mobile-min-touch-target);
+	max-height: var(--mobile-min-touch-target);
+}
+
+[data-layout="choutex-mobile"] .editor-tab {
+	min-width: 120px;
+	max-width: 180px;
+	height: calc(var(--mobile-min-touch-target) - 8px);
+	font-size: var(--mobile-font-sm);
+	padding: var(--mobile-spacing-sm) var(--mobile-spacing-md);
+}
+
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-editor,
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-scroller,
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-content,
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-line,
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-lineWrapping,
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-contentEditable {
+	font-size: var(--mobile-font-lg) !important;
+}
+
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-scroller {
+	line-height: 1.7;
+}
+
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-content {
+	padding: var(--mobile-spacing-md);
+}
+
+[data-layout="choutex-mobile"] .codemirror-editor-container .cm-line {
+	padding: 0 var(--mobile-spacing-sm);
+}
+
+[data-layout="choutex-mobile"] .view-toggle {
+	border-bottom: 2px solid var(--accent-border);
+	background-color: var(--pico-secondary-background);
+}
+
+[data-layout="choutex-mobile"] .view-toggle button {
+	padding: var(--mobile-spacing-md);
+	font-size: var(--mobile-font-sm);
+	min-height: var(--mobile-min-touch-target);
+	font-weight: 600;
+}
+
+[data-layout="choutex-mobile"] .file-explorer-header {
+	padding: var(--mobile-spacing-md);
+	min-height: calc(var(--mobile-min-touch-target) + 8px);
+	margin-top: 0 !important;
+	flex-shrink: 0 !important;
+}
+
+[data-layout="choutex-mobile"] .file-explorer-header h3 {
+	font-size: var(--mobile-font-lg);
+}
+
+[data-layout="choutex-mobile"] .file-node {
+	padding: var(--mobile-spacing-md);
+	font-size: var(--mobile-font-sm);
+	min-height: var(--mobile-min-touch-target);
+	border-radius: var(--mobile-radius-md);
+	margin: var(--mobile-spacing-xs) var(--mobile-spacing-sm);
+}
+
+[data-layout="choutex-mobile"] .file-name {
+	font-size: var(--mobile-font-sm);
+}
+
+[data-layout="choutex-mobile"] .action-btn {
+	min-width: var(--mobile-min-touch-target);
+	min-height: var(--mobile-min-touch-target);
+	padding: var(--mobile-spacing-md);
+}
+
+[data-layout="choutex-mobile"] .action-btn svg {
+	width: var(--mobile-icon-size-md);
+	height: var(--mobile-icon-size-md);
+}
+
+[data-layout="choutex-mobile"] .output-header {
+	padding: var(--mobile-spacing-md);
+	min-height: calc(var(--mobile-min-touch-target) * 1.5);
+}
+
+[data-theme-plugin="choutex-mobile"] .ͼ1 .codemirror-toolbar__item {
+	min-height: var(--mobile-min-touch-target);
+	min-width: var(--mobile-min-touch-target);
+	padding-top: var(--mobile-spacing-xs);
+	padding-bottom: auto;
+}
+
+[data-theme-plugin="choutex-mobile"] .ͼ1 .codemirror-toolbar__item svg {
+	width: var(--mobile-icon-size-md);
+	height: var(--mobile-icon-size-md);
+}
+
+
+[data-layout="choutex-mobile"] .compile-button-group .compile-button {
+	min-height: var(--mobile-min-touch-target);
+	padding: var(--mobile-spacing-sm) var(--mobile-spacing-sm);
+	font-size: var(--mobile-font-sm);
+}
+
+[data-layout="choutex-mobile"] .share-project-buttons {
+	gap: var(--mobile-spacing-sm);
+}
+
+[data-layout="choutex-mobile"] .share-button-group .main-button {
+	min-height: var(--mobile-min-touch-target);
+	padding: var(--mobile-spacing-sm) var(--mobile-spacing-sm);
+	font-size: var(--mobile-font-sm);
+}
+
+[data-layout="choutex-mobile"] .backup-button-group .main-button,
+[data-layout="choutex-mobile"] .collab-button-group .main-button {
+	min-height: var(--mobile-min-touch-target);
+	padding: var(--mobile-spacing-sm) var(--mobile-spacing-sm);
+}
+
+[data-layout="choutex-mobile"] .dropdown-toggle,
+[data-layout="choutex-mobile"] .collab-button-group .collab-dropdown-toggle,
+[data-layout="choutex-mobile"] .backup-button-group .backup-dropdown-toggle {
+	min-height: var(--mobile-min-touch-target);
+	padding: var(--mobile-spacing-md);
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	width: var(--mobile-min-touch-target);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+[data-layout="choutex-mobile"] .backup-button-group .main-button svg,
+[data-layout="choutex-mobile"] .collab-button-group .main-button svg,
+[data-layout="choutex-mobile"] .compile-button-group .compile-button svg,
+[data-layout="choutex-mobile"] .open-button-group .open-button svg,
+[data-layout="choutex-mobile"] .share-button-group .main-button svg,
+[data-layout="choutex-mobile"] .dropdown-toggle svg,
+[data-layout="choutex-mobile"] .collab-button-group .collab-dropdown-toggle svg,
+[data-layout="choutex-mobile"] .backup-button-group .backup-dropdown-toggle svg {
+	width: var(--mobile-icon-size-sm);
+	height: var(--mobile-icon-size-sm);
+	flex-shrink: 0;
+}
+
+
+/* TODO (fabawi): Hidden for now, but might consider restoring them in the future */
+[data-layout="choutex-mobile"] .backup-button-group .main-button .backup-label,
+[data-layout="choutex-mobile"] .collab-button-group .main-button .collab-label,
+[data-layout="choutex-mobile"] .backup-button-group .backup-dropdown-toggle,
+[data-layout="choutex-mobile"] .collab-button-group .collab-dropdown-toggle {
+	/* font-size: var(--mobile-font-sm); */
+	display: none;
+}
+
+[data-layout="choutex-mobile"] .tab-button {
+	padding: var(--mobile-spacing-sm) var(--mobile-spacing-md);
+	font-size: var(--mobile-font-sm);
+	min-height: calc(var(--mobile-min-touch-target) - 8px);
+}
+
+[data-layout="choutex-mobile"] .latex-outline-header,
+[data-layout="choutex-mobile"] .typst-outline-header {
+	padding: var(--mobile-spacing-md);
+	font-size: var(--mobile-font-sm);
+}
+
+[data-layout="choutex-mobile"] .outline-section {
+	padding: var(--mobile-spacing-sm) var(--mobile-spacing-md);
+	font-size: var(--mobile-font-sm);
+	min-height: var(--mobile-min-touch-target);
+	border-radius: var(--mobile-radius-md);
+	margin: var(--mobile-spacing-xs);
+}
+
+[data-layout="choutex-mobile"] .chat-panel-header {
+	padding: var(--mobile-spacing-md);
+	min-height: calc(var(--mobile-min-touch-target) + 8px);
+}
+
+[data-layout="choutex-mobile"] .chat-panel-title {
+	font-size: var(--mobile-font-lg);
+}
+
+[data-layout="choutex-mobile"] .chat-message {
+	margin-bottom: var(--mobile-spacing-md);
+}
+
+[data-layout="choutex-mobile"] .message-text {
+	font-size: var(--mobile-font-sm);
+	line-height: 1.6;
+}
+
+[data-layout="choutex-mobile"] .chat-panel-input {
+	font-size: var(--mobile-font-md);
+	padding: var(--mobile-spacing-md);
+	min-height: calc(var(--mobile-min-touch-target) * 2);
+}
+
+[data-layout="choutex-mobile"] .chat-panel-send-button {
+	font-size: var(--mobile-font-sm);
+	padding: var(--mobile-spacing-md) var(--mobile-spacing-lg);
+	min-height: var(--mobile-min-touch-target);
+}
+
+[data-layout="choutex-mobile"] .settings-button {
+	min-height: var(--mobile-min-touch-target);
+	font-size: var(--mobile-font-sm);
+	padding: var(--mobile-spacing-sm) var(--mobile-spacing-md);
+}
+
+[data-layout="choutex-mobile"] .modal-container {
+	border-radius: var(--mobile-radius-lg);
+}
+
+[data-layout="choutex-mobile"] .modal-header {
+	padding: var(--mobile-spacing-lg);
+}
+
+[data-layout="choutex-mobile"] .modal-header h2 {
+	font-size: var(--mobile-font-lg);
+}
+
+[data-layout="choutex-mobile"] .modal-content {
+	padding: var(--mobile-spacing-lg);
+}
+
+[data-layout="choutex-mobile"] .modal-close-button {
+	min-width: var(--mobile-min-touch-target);
+	min-height: var(--mobile-min-touch-target);
+	padding: var(--mobile-spacing-md);
+}
+
+[data-layout="choutex-mobile"] .modal-close-button svg {
+	width: var(--mobile-icon-size-md);
+	height: var(--mobile-icon-size-md);
+}
+
+[data-layout="choutex-mobile"] .form-group label {
+	font-size: var(--mobile-font-sm);
+	margin-bottom: var(--mobile-spacing-sm);
+}
+
+[data-layout="choutex-mobile"] .form-group input,
+[data-layout="choutex-mobile"] .form-group textarea,
+[data-layout="choutex-mobile"] .form-group select {
+	font-size: var(--mobile-font-md);
+	padding: var(--mobile-spacing-md);
+	min-height: var(--mobile-min-touch-target);
+	border-radius: var(--mobile-radius-md);
+}
+
+[data-layout="choutex-mobile"] .button,
+[data-layout="choutex-mobile"] .action-button {
+	min-height: var(--mobile-min-touch-target);
+	font-size: var(--mobile-font-sm);
+	padding: var(--mobile-spacing-sm) var(--mobile-spacing-md);
+	border-radius: var(--mobile-radius-md);
+}
+
+[data-layout="choutex-mobile"] .button.small {
+	font-size: var(--mobile-font-xs);
+	padding: var(--mobile-spacing-xs) var(--mobile-spacing-sm);
+	min-height: calc(var(--mobile-min-touch-target) - 12px);
+}
+
+[data-layout="choutex-mobile"] .dropdown-menu {
+	min-width: 180px;
+	border-radius: var(--mobile-radius-lg);
+	box-shadow: var(--mobile-shadow-lg);
+}
+
+[data-layout="choutex-mobile"] .dropdown-item {
+	padding: var(--mobile-spacing-md);
+	font-size: var(--mobile-font-sm);
+	min-height: var(--mobile-min-touch-target);
+}
+
+[data-layout="choutex-mobile"] .dropdown-checkbox {
+	font-size: var(--mobile-font-sm);
+	min-height: var(--mobile-min-touch-target);
+}
+
+[data-layout="choutex-mobile"] .toast {
+	padding: var(--mobile-spacing-md);
+	border-radius: var(--mobile-radius-lg);
+	font-size: var(--mobile-font-sm);
+}
+
+[data-layout="choutex-mobile"] .project-title {
+	font-size: var(--mobile-font-sm);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: var(--project-title-width);
+}
+
+[data-layout="choutex-mobile"] .project-description {
+	/* font-size: var(--mobile-font-xs);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: var(--project-title-width); */
+	display: none;
+}
+
+[data-layout="choutex-mobile"] .user-dropdown-button,
+[data-layout="choutex-mobile"] .back-button {
+	font-size: var(--mobile-font-sm);
+	height: var(--mobile-min-touch-target);
+	border: 1px solid var(--accent-border, #ddd);
+	border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+	background-color: var(--pico-primary-inverse) !important;
+}
+
+[data-layout="choutex-mobile"] .user-dropdown-button span {
+	min-width: var(--mobile-min-touch-target);
+	padding: var(--mobile-spacing-xs);
+}
+
+[data-layout="choutex-mobile"] .linked-file-icon {
+	border: none;
+}
+
+.mobile-nav-button {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--mobile-spacing-xs);
+	background: none;
+	border: none;
+	color: var(--pico-secondary);
+	cursor: pointer;
+	transition: all var(--mobile-transition-fast);
+	font-size: var(--mobile-font-xs);
+	font-weight: 500;
+	padding: var(--mobile-spacing-md) var(--mobile-spacing-sm);
+	text-align: center;
+	min-height: var(--mobile-nav-height);
+}
+
+.mobile-nav-button:hover,
+.mobile-nav-button.active {
+	color: var(--pico-primary);
+	background-color: rgba(var(--pico-primary-rgb, 16, 149, 193), 0.1);
+}
+
+.mobile-nav-button svg {
+	width: var(--mobile-icon-size-lg);
+	height: var(--mobile-icon-size-lg);
+	flex-shrink: 0;
+	transition: transform var(--mobile-transition-fast);
+}
+
+.mobile-nav-button.active svg {
+	transform: scale(1.1);
+}
+
+.mobile-nav-button span {
+	font-size: var(--mobile-font-xs);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+[data-layout="choutex-mobile"] ::-webkit-scrollbar {
+	width: 8px;
+}
+
+[data-layout="choutex-mobile"] ::-webkit-scrollbar-thumb {
+	background-color: var(--accent-border);
+	border-radius: var(--mobile-radius-sm);
+}
+
+[data-layout="choutex-mobile"] ::-webkit-scrollbar-thumb:hover {
+	background-color: var(--pico-primary);
+}

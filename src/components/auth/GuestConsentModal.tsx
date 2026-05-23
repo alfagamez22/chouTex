@@ -48,14 +48,14 @@ const GuestConsentModal: React.FC<GuestConsentModalProps> = ({
     <Modal
       isOpen={isOpen}
       onClose={handleModalClose}
-      title={t('Try TeXlyre as Guest')}
+      title={t('Try chouTex as Guest')}
       icon={UserIcon}
       size="medium">
 
       <div className="guest-consent-modal">
         <div className="guest-info-section">
           <h3>{t('Guest Session Information')}</h3>
-          <p>{t('Guest sessions allow you to try TeXlyre\'s full LaTeX editing capabilities without creating an account. Here\'s what you need to know:')}
+          <p>{t('Guest sessions allow you to try chouTex\'s full LaTeX editing capabilities without creating an account. Here\'s what you need to know:')}
 
 
 

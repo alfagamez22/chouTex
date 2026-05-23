@@ -1,0 +1,131 @@
+/* extras/themes/choutex_wide/styles/components/toast.css */
+[data-layout="choutex-wide"] {
+	--toast-top-offset: calc(var(--choutex-header-height) + var(--choutex-spacing-xl) + var(--choutex-spacing-md));
+	--toast-right-offset: var(--choutex-spacing-xl);
+	--toast-max-width: 360px;
+	--toast-padding: var(--choutex-spacing-md) var(--choutex-spacing-lg);
+	--toast-border-radius: var(--choutex-radius-lg);
+	--toast-shadow: var(--choutex-shadow-lg);
+	--toast-background-color: var(--pico-background);
+	--toast-text-color: var(--pico-background-inverse);
+	--toast-animation: toastSlideInWide 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Toast container positioning */
+[data-layout="choutex-wide"] .toast-container {
+	top: var(--toast-top-offset);
+	right: var(--toast-right-offset);
+	max-width: var(--toast-max-width);
+}
+
+/* Base toast styling */
+[data-layout="choutex-wide"] .toast {
+	padding: var(--toast-padding);
+	border-radius: var(--toast-border-radius);
+	box-shadow: var(--toast-shadow);
+	background-color: var(--toast-background-color);
+	align-items: flex-start;
+	animation: var(--toast-animation);
+}
+
+[data-layout="choutex-wide"] .toast-icon {
+	color: var(--toast-text-color);
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Toast dismiss button */
+[data-layout="choutex-wide"] .toast-dismiss {
+	padding: var(--choutex-spacing-xs);
+	margin: calc(-1 * var(--choutex-spacing-xs));
+	border-radius: var(--choutex-radius-sm);
+	font-size: 1.2rem;
+	transition: all var(--choutex-transition-fast);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	color: var(--toast-text-color);
+}
+
+[data-layout="choutex-wide"] .toast-dismiss:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: scale(1.1);
+	color: var(--toast-text-color);
+}
+
+/* Toast visibility states */
+[data-layout="choutex-wide"] .toast-visible {
+	animation: var(--toast-animation);
+}
+
+[data-layout="choutex-wide"] .toast-hidden {
+	animation: toastSlideOutWide 0.3s ease-in forwards;
+}
+
+/* Loading animation for toast icons */
+[data-layout="choutex-wide"] .toast-loading .toast-icon {
+	animation: toastSpinWide 1s linear infinite;
+}
+
+/* Keyframe animations */
+@keyframes toastSlideInWide {
+	from {
+		transform: translateX(calc(100% + var(--choutex-spacing-xl)));
+		opacity: 0;
+		scale: 0.9;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+		scale: 1;
+	}
+}
+
+@keyframes toastSlideOutWide {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+		scale: 1;
+	}
+
+	to {
+		transform: translateX(calc(100% + var(--choutex-spacing-xl)));
+		opacity: 0;
+		scale: 0.9;
+	}
+}
+
+@keyframes toastSpinWide {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	[data-layout="choutex-wide"] {
+		--toast-top-offset: calc(var(--choutex-header-height) + var(--choutex-spacing-md));
+		--toast-right-offset: var(--choutex-spacing-md);
+		--toast-max-width: calc(100vw - 2 * var(--choutex-spacing-md));
+		--toast-padding: var(--choutex-spacing-sm) var(--choutex-spacing-md);
+	}
+
+	[data-layout="choutex-wide"] .toast {
+		align-items: center;
+	}
+
+	[data-layout="choutex-wide"] .toast-message {
+		font-size: 0.875rem;
+	}
+}
+
+[data-layout="choutex-wide"] .notification-toast-container {
+	display: none !important;
+}

@@ -56,7 +56,7 @@ export const cleanupProjectDatabases = async (
 			? project.docUrl.slice(4)
 			: project.docUrl;
 
-		const dbName = `texlyre-project-${projectId}`;
+		const dbName = `choutex-project-${projectId}`;
 
 		await closeActiveConnections(projectId);
 		await new Promise((resolve) => setTimeout(resolve, 500));
@@ -90,7 +90,7 @@ export const cleanupDocumentDatabases = async (
 	projectId: string,
 ): Promise<void> => {
 	try {
-		const dbName = `texlyre-project-${projectId}`;
+		const dbName = `choutex-project-${projectId}`;
 		const metadataCollection = `${dbName}-yjs_metadata`;
 
 		const metadataDoc = new Y.Doc();

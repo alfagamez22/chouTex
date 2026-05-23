@@ -210,10 +210,10 @@ export const isBinaryFile = (fileName: string): boolean => {
 
 export const isTemporaryFile = (fileName: string): boolean => {
 	const temporaryPaths = [
-		// '/.texlyre_src',
-		// '/.texlyre_cache',
-		// '/.texlyre_temp',
-		'/.texlyre',
+		// '/.choutex_src',
+		// '/.choutex_cache',
+		// '/.choutex_temp',
+		'/.choutex',
 		'/.git',
 		'/.svn',
 		'/node_modules',

@@ -108,7 +108,7 @@ const BackupDiscoveryModal: React.FC<BackupDiscoveryModalProps> = ({
 
 				<div className="discovery-info">
 					<p>
-						{t('We found {count} project in your backup that are not on TeXlyre. Would you like to import them?', { count: discoveredProjects.length })}
+						{t('We found {count} project in your backup that are not on chouTex. Would you like to import them?', { count: discoveredProjects.length })}
 					</p>
 				</div>
 

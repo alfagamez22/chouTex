@@ -122,7 +122,7 @@ export const SecretsProvider: React.FC<SecretsProviderProps> = ({
 	const isPasswordSet = userPassword !== null;
 
 	const getStorageKey = useCallback((userId: string): string => {
-		return `texlyre-user-${userId}-secrets`;
+		return `choutex-user-${userId}-secrets`;
 	}, []);
 
 	const getSecretId = useCallback(
@@ -356,7 +356,7 @@ export const SecretsProvider: React.FC<SecretsProviderProps> = ({
 
 			return new Promise((resolve) => {
 				setPasswordModalMessage(
-					message || t('Enter your TeXlyre password to access encrypted secrets:'),
+					message || t('Enter your chouTex password to access encrypted secrets:'),
 				);
 				setPasswordResolve(() => resolve);
 				setIsPasswordModalOpen(true);

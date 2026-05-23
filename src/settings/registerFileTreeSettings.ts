@@ -34,7 +34,7 @@ export function useRegisterFileTreeSettings() {
             subcategory: t('File Explorer'),
             type: 'checkbox',
             label: t('Enable internal (local) drag and drop'),
-            description: t('Allow dragging files and folders within the TeXlyre file explorer to move them'),
+            description: t('Allow dragging files and folders within the chouTex file explorer to move them'),
 
             defaultValue: true
         });

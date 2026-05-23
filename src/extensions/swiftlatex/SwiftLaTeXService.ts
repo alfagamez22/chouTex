@@ -230,7 +230,7 @@ class SwiftLaTeXService {
     }
 
     private getCacheDirectory(engineType: InternalEngineKey): string {
-        return engineType === 'dvipdfmx' ? '/.texlyre_cache/__dvi' : '/.texlyre_cache/__tex';
+        return engineType === 'dvipdfmx' ? '/.choutex_cache/__dvi' : '/.choutex_cache/__tex';
     }
 
     private async processDviToPdf(
@@ -422,7 +422,7 @@ class SwiftLaTeXService {
     private async storeOutputDirectories(engine: BaseEngine): Promise<void> {
         if (this.storeCache) await this.storeCacheDirectory(engine);
         if (this.storeWorkingDirectory) {
-            await fileStorageService.cleanupDirectory('/.texlyre_src/__work');
+            await fileStorageService.cleanupDirectory('/.choutex_src/__work');
             await this.storeWorkDirectory(engine);
         }
     }
@@ -440,7 +440,7 @@ class SwiftLaTeXService {
         try {
             const workFiles = await engine.dumpDirectory('/work');
             const filtered = await this.filterWorkFilesExcludingCache(workFiles);
-            await this.batchStoreDirectoryContents(filtered, '/.texlyre_src/__work');
+            await this.batchStoreDirectoryContents(filtered, '/.choutex_src/__work');
         } catch (error) {
             console.error('Error saving work directory:', error);
         }
@@ -550,7 +550,7 @@ class SwiftLaTeXService {
                 outputs.push({
                     id: nanoid(),
                     name: pdfName,
-                    path: `/.texlyre_src/__output/${pdfName}`,
+                    path: `/.choutex_src/__output/${pdfName}`,
                     type: 'file',
                     content: toArrayBuffer(result.pdf.buffer),
                     lastModified: Date.now(),
@@ -582,7 +582,7 @@ class SwiftLaTeXService {
     }
 
     async cleanupStoredWorkDirectory(): Promise<void> {
-        await fileStorageService.cleanupDirectory('/.texlyre_src/__work');
+        await fileStorageService.cleanupDirectory('/.choutex_src/__work');
     }
 
     private async createCompilationLogFile(mainFile: string, log: string): Promise<FileNode> {
@@ -592,7 +592,7 @@ class SwiftLaTeXService {
         return {
             id: nanoid(),
             name: `${baseName}.log`,
-            path: `/.texlyre_src/__output/${baseName}.log`,
+            path: `/.choutex_src/__output/${baseName}.log`,
             type: 'file',
             content: encoded.buffer,
             lastModified: Date.now(),
@@ -605,8 +605,8 @@ class SwiftLaTeXService {
 
     private async ensureOutputDirectoriesExist(): Promise<void> {
         const required = [
-            '/.texlyre_src', '/.texlyre_src/__output', '/.texlyre_src/__work',
-            '/.texlyre_cache', '/.texlyre_cache/__tex', '/.texlyre_cache/__dvi',
+            '/.choutex_src', '/.choutex_src/__output', '/.choutex_src/__work',
+            '/.choutex_cache', '/.choutex_cache/__tex', '/.choutex_cache/__dvi',
         ];
         const toCreate: FileNode[] = [];
         const existing = await fileStorageService.getAllFiles(true, false, false);
@@ -667,7 +667,7 @@ class SwiftLaTeXService {
 
     async extractBblFile(mainFileName: string): Promise<SwiftExportArtifact | null> {
         const baseName = this.getBaseName(mainFileName);
-        const workDir = '/.texlyre_src/__work';
+        const workDir = '/.choutex_src/__work';
         for (const p of [`${workDir}/${baseName}.bbl`, `${workDir}/_${baseName}.bbl`]) {
             try {
                 const file = await fileStorageService.getFileByPath(p, true);
@@ -696,7 +696,7 @@ class SwiftLaTeXService {
     }
 
     async collectStoredWorkFiles(): Promise<SwiftExportArtifact[]> {
-        const workDir = '/.texlyre_src/__work';
+        const workDir = '/.choutex_src/__work';
         const artifacts: SwiftExportArtifact[] = [];
         try {
             const files = await fileStorageService.getFilesByPath(

@@ -24,7 +24,7 @@ const PasswordInfo: React.FC = () => {
                                         <InfoIcon />
                                 </button>
                                 {showTooltip &&
-                                        <div className="password-info-tooltip">{t('Your password separates different user accounts on the same device and browser, and encrypts sensitive information like GitHub tokens and API keys if provided. The password itself is securely hashed and never stored in plain text. However, your project files and documents remain unencrypted in browser storage - anyone with physical access to this browser can view them. When using public or shared computers, export your account as a ZIP file and clear TeXlyre\'s browser data before leaving.')}
+                                        <div className="password-info-tooltip">{t('Your password separates different user accounts on the same device and browser, and encrypts sensitive information like GitHub tokens and API keys if provided. The password itself is securely hashed and never stored in plain text. However, your project files and documents remain unencrypted in browser storage - anyone with physical access to this browser can view them. When using public or shared computers, export your account as a ZIP file and clear chouTex\'s browser data before leaving.')}
 
 
 

@@ -77,7 +77,7 @@ export const LaTeXProvider: React.FC<LaTeXProviderProps> = ({ children }) => {
   ]);
 
   const getProjectName = (): string => {
-    if (document.title && document.title !== 'TeXlyre') {
+    if (document.title && document.title !== 'chouTex') {
       return document.title;
     }
 

@@ -40,7 +40,7 @@
 		"extras/**/*",
 		"build.ts",
 		"plugins.config.js",
-		"texlyre.config.ts"
+		"choutex.config.ts"
 	],
 	"references": [
 		{

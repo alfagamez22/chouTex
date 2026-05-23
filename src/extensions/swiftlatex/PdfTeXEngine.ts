@@ -18,8 +18,8 @@ export class PdfTeXEngine extends BaseEngine {
 	constructor() {
 		const config: EngineConfig = {
 			name: 'PdfTeX',
-			setupScript: `${BASE_PATH}/core/swiftlatex/TexlyrePdfTeXEngineSetup.js`,
-			engineScript: `${BASE_PATH}/core/swiftlatex/texlyrepdftex.js`,
+			setupScript: `${BASE_PATH}/core/swiftlatex/ChouTexPdfTeXEngineSetup.js`,
+			engineScript: `${BASE_PATH}/core/swiftlatex/choutexpdftex.js`,
 			engineClass: 'PdfTeXEngine',
 		};
 		super(config);

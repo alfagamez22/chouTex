@@ -6,7 +6,7 @@ import { useSettings } from '../hooks/useSettings';
 import { pluginRegistry } from '../plugins/PluginRegistry';
 
 export function useRegisterThemeSettings(
-    defaultThemeId = 'texlyre-theme',
+    defaultThemeId = 'choutex-theme',
     defaultVariant = 'dark'
 ) {
     const { registerSetting, getSetting } = useSettings();
@@ -54,7 +54,7 @@ export function useRegisterThemeSettings(
             subcategory: t('Theme'),
             type: 'select',
             label: t('Layout'),
-            description: t('Select the theme layout to use for TeXlyre'),
+            description: t('Select the theme layout to use for chouTex'),
             defaultValue: currentThemePlugin?.id || defaultThemeId,
             options: availableThemes.map((theme) => ({
                 label: t(theme.name),

@@ -15,7 +15,7 @@ import type { FileNode } from '../../types/files';
 import { isLatexMainFile, isTemporaryFile } from '../../utils/fileUtils';
 import { fileStorageService } from '../../services/FileStorageService';
 import { latexService } from '../../services/LaTeXService';
-import { BUSYTEX_BUNDLE_LABELS } from '../../extensions/texlyre-busytex/BusyTeXService';
+import { BUSYTEX_BUNDLE_LABELS } from '../../extensions/choutex-busytex/BusyTeXService';
 import { ChevronDownIcon, ExportIcon, TrashIcon, OptionsIcon } from '../common/Icons';
 
 interface LaTeXExportButtonProps {

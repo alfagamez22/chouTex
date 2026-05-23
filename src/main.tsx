@@ -1,6 +1,6 @@
 /*
- * TeXlyre - A local-first LaTeX & Typst collaborative web editor
- * Copyright (C) 2026 TeXlyre 
+ * chouTex - A local-first LaTeX & Typst collaborative web editor
+ * Copyright (C) 2026 chouTex 
  * Maintainer: Fares Abawi <fares@abawi.me> (https://abawi.me)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -114,7 +114,7 @@ if (
 			if (registration.active) {
 				registration.active.postMessage({
 					type: 'CACHE_URLS',
-					urls: [`${BASE_PATH}/assets/images/TeXlyre_notext_192.png`],
+					urls: [`${BASE_PATH}/assets/images/chouTex_notext_192.png`],
 				});
 			}
 		} catch (error) {
@@ -124,8 +124,8 @@ if (
 }
 
 async function initUserData(): Promise<void> {
-	const settingsKey = 'texlyre-settings';
-	const propertiesKey = 'texlyre-properties';
+	const settingsKey = 'choutex-settings';
+	const propertiesKey = 'choutex-properties';
 
 	const existingSettings = localStorage.getItem(settingsKey);
 	const existingProperties = localStorage.getItem(propertiesKey);
@@ -174,7 +174,7 @@ async function initUserData(): Promise<void> {
 
 async function initDatabases() {
 	try {
-		await openDB('texlyre-auth', 1, {
+		await openDB('choutex-auth', 1, {
 			upgrade(db) {
 				if (!db.objectStoreNames.contains('users')) {
 					const userStore = db.createObjectStore('users', { keyPath: 'id' });
@@ -200,7 +200,7 @@ async function initDatabases() {
 }
 
 function setupDirection() {
-	const settingsKey = 'texlyre-settings';
+	const settingsKey = 'choutex-settings';
 	const existingSettings = localStorage.getItem(settingsKey);
 
 	let direction = 'ltr';

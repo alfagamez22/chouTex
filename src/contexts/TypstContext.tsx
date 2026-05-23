@@ -53,7 +53,7 @@ export const TypstProvider: React.FC<TypstProviderProps> = ({ children }) => {
   }, []);
 
   const getProjectName = (): string => {
-    if (document.title && document.title !== 'TeXlyre') {
+    if (document.title && document.title !== 'chouTex') {
       return document.title;
     }
 

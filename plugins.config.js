@@ -17,8 +17,8 @@ export default {
 	  "backup/gitlab",
 	  "backup/forgejo",
 	  "backup/gitea",
-	  "themes/texlyre_slim",
-	  "themes/texlyre_wide",
-	  "themes/texlyre_mobile"
+	  "themes/choutex_slim",
+	  "themes/choutex_wide",
+	  "themes/choutex_mobile"
 	],
 };

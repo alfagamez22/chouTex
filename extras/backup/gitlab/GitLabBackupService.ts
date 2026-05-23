@@ -51,7 +51,7 @@ export class GitLabBackupService {
     private secretsContext: SecretsContextType | null = null;
     private lastOperationTime = 0;
     private readonly MIN_OPERATION_INTERVAL = 2000;
-    private readonly PLUGIN_ID = 'texlyre-gitlab-backup';
+    private readonly PLUGIN_ID = 'choutex-gitlab-backup';
     private readonly SECRET_KEYS = {
         TOKEN: 'gitlab-token',
         PROJECT: 'selected-project',
@@ -95,7 +95,7 @@ export class GitLabBackupService {
 
     private getDefaultCommitMessage(): string {
         const template =
-            this.settingsCache.defaultCommitMessage || 'TeXlyre Backup: {date}';
+            this.settingsCache.defaultCommitMessage || 'chouTex Backup: {date}';
         const now = new Date();
         return template
             .replace('{date}', now.toLocaleDateString())

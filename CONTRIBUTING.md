@@ -1,6 +1,6 @@
-# Contributing to TeXlyre
+# Contributing to chouTex
 
-Thanks for your interest in contributing! TeXlyre welcomes contributions of all kinds.
+Thanks for your interest in contributing! chouTex welcomes contributions of all kinds.
 
 ## Quick Start
 
@@ -13,15 +13,15 @@ Thanks for your interest in contributing! TeXlyre welcomes contributions of all 
 ## Development Setup
 
 ```bash
-git clone https://github.com/texlyre/texlyre.git
-cd texlyre
+git clone https://github.com/choutex/choutex.git
+cd choutex
 npm install
 npm run dev
 ```
 
 ## What We Need Help With
 
-- **Bug fixes** - Check our [issues](https://github.com/texlyre/texlyre/issues)
+- **Bug fixes** - Check our [issues](https://github.com/choutex/choutex/issues)
 - **Plugin development** - See `extras/` directory for examples
 - **Documentation** - Improve README, add code comments
 - **Testing** - Help test on different browsers and devices
@@ -39,17 +39,17 @@ Plugins go in the `extras/` directory. Add your plugin path to `plugins.config.j
 
 ## Translation & Localization
 
-TeXlyre uses [Crowdin](https://crowdin.com/project/texlyre) for community translations.
+chouTex uses [Crowdin](https://crowdin.com/project/choutex) for community translations.
 
 ### Contributing Translations
 
-1. Visit our [Crowdin project](https://crowdin.com/project/texlyre)
+1. Visit our [Crowdin project](https://crowdin.com/project/choutex)
 2. Select your language and start translating
 3. All translations are manually synced to the repository on release
 
 ### Adding a New Language
 
-To add a new language to TeXlyre:
+To add a new language to chouTex:
 
 1. Add the language JSON file to `translations/locales/`
 2. Import and register it in `src/i18n.ts`:
@@ -148,7 +148,7 @@ Some languages require a few or all of the pluralization forms. It is not necess
 
 ## Questions?
 
-Open an [issue](https://github.com/TeXlyre/texlyre/issues) or start a [discussion](https://github.com/TeXlyre/texlyre/discussions).
+Open an [issue](https://github.com/chouTex/choutex/issues) or start a [discussion](https://github.com/chouTex/choutex/discussions).
 
 ---
 

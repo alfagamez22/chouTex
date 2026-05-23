@@ -73,12 +73,12 @@ export const PropertiesProvider: React.FC<PropertiesProviderProps> = ({
 	const isLocalStorageLoaded = useRef(false);
 
 	const getCurrentUserId = useCallback((): string | null => {
-		return localStorage.getItem('texlyre-current-user');
+		return localStorage.getItem('choutex-current-user');
 	}, []);
 
 	const getStorageKey = useCallback((): string => {
 		const userId = getCurrentUserId();
-		return userId ? `texlyre-user-${userId}-properties` : 'texlyre-properties';
+		return userId ? `choutex-user-${userId}-properties` : 'choutex-properties';
 	}, [getCurrentUserId]);
 
 	const getPropertyId = useCallback((
@@ -95,9 +95,9 @@ export const PropertiesProvider: React.FC<PropertiesProviderProps> = ({
 	useEffect(() => {
 		const userId = getCurrentUserId();
 		const userStorageKey = userId
-			? `texlyre-user-${userId}-properties`
-			: 'texlyre-properties';
-		const globalStorageKey = 'texlyre-properties';
+			? `choutex-user-${userId}-properties`
+			: 'choutex-properties';
+		const globalStorageKey = 'choutex-properties';
 
 		try {
 			const globalProperties = localStorage.getItem(globalStorageKey);

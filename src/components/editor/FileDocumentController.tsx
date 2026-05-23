@@ -66,7 +66,7 @@ const getDocumentContent = async (
   const projectId = projectUrl.startsWith('yjs:') ?
     projectUrl.slice(4) :
     projectUrl;
-  const dbName = `texlyre-project-${projectId}`;
+  const dbName = `choutex-project-${projectId}`;
   const docCollection = `${dbName}-yjs_${docId}`;
 
   try {

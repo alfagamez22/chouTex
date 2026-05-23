@@ -31,7 +31,7 @@ const PopoutViewerWindow: React.FC<PopoutViewerWindowProps> = ({ projectId }) =>
   const useEnhancedRenderer = getSetting('pdf-renderer-enable')?.value ?? true;
 
   useEffect(() => {
-    const channel = new BroadcastChannel(`texlyre-popout-${projectId}`);
+    const channel = new BroadcastChannel(`choutex-popout-${projectId}`);
     channelRef.current = channel;
 
     const handleMessage = (event: MessageEvent) => {

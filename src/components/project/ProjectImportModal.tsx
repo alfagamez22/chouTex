@@ -275,8 +275,8 @@ const ProjectImportModal: React.FC<ProjectImportModalProps> = ({
                   }}>
                   <ShareIcon />
                   <div>
-                    <strong>{t('From TeXlyre Link')}</strong>
-                    <p>{t('Open a shared project using its TeXlyre link')}</p>
+                    <strong>{t('From chouTex Link')}</strong>
+                    <p>{t('Open a shared project using its chouTex link')}</p>
                   </div>
                 </label>
 
@@ -298,7 +298,7 @@ const ProjectImportModal: React.FC<ProjectImportModalProps> = ({
                   <ZipFileIcon />
                   <div>
                     <strong>{t('From ZIP File')}</strong>
-                    <p>{t('Import projects from a TeXlyre export file: Supports LaTeX and Typst')}</p>
+                    <p>{t('Import projects from a chouTex export file: Supports LaTeX and Typst')}</p>
                   </div>
                   <input
                     ref={fileInputRef}

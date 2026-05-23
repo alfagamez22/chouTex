@@ -92,7 +92,7 @@ class FileSystemBackupService {
 
 			this.rootHandle = await (window as any).showDirectoryPicker({
 				mode: 'readwrite',
-				id: 'texlyre-backup',
+				id: 'choutex-backup',
 			});
 
 			this.updateStatus({
@@ -112,7 +112,7 @@ class FileSystemBackupService {
 		try {
 			this.rootHandle = await (window as any).showDirectoryPicker({
 				mode: 'readwrite',
-				id: 'texlyre-backup-new',
+				id: 'choutex-backup-new',
 			});
 
 			this.updateStatus({

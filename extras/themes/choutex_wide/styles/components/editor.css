@@ -1,0 +1,57 @@
+/* extras/themes/choutex_wide/styles/components/editor.css */
+[data-layout="choutex-wide"] .editor-wrapper {
+	flex: 1;
+	overflow: hidden;
+}
+
+[data-layout="choutex-wide"] .cursor-indicators {
+	padding: var(--choutex-spacing-xs) var(--choutex-spacing-sm);
+	background-color: var(--accent-background);
+	border-bottom: 1px solid var(--accent-border);
+	gap: var(--choutex-spacing-sm);
+}
+
+[data-layout="choutex-wide"] .cursor-indicator {
+	border-radius: var(--choutex-radius-sm);
+	padding: var(--choutex-spacing-xs) var(--choutex-spacing-sm);
+	font-size: var(--space-sd);
+	font-weight: 500;
+	color: var(--pico-background);
+}
+
+[data-layout="choutex-wide"] .editor-container.empty-state {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--pico-secondary);
+	padding: var(--choutex-spacing-xl);
+}
+
+[data-layout="choutex-wide"] .editor-container.empty-state p {
+	max-width: 500px;
+	text-align: center;
+	opacity: 0.8;
+	font-size: 1.1rem;
+	color: var(--text-color);
+}
+
+[data-layout="choutex-wide"] .editor-container.binary-file {
+	padding: var(--choutex-spacing-xl);
+}
+
+[data-layout="choutex-wide"] .binary-file-message {
+	background-color: var(--accent-background);
+	border: 1px solid var(--accent-border);
+	border-radius: var(--choutex-radius-lg);
+	padding: var(--choutex-spacing-xl);
+	box-shadow: var(--choutex-shadow-md);
+	color: var(--text-color);
+}
+
+[data-layout="choutex-wide"] .viewer-plugin-info {
+	padding: var(--choutex-spacing-xs) var(--choutex-spacing-sm);
+	background-color: var(--accent-background);
+	font-size: 0.5rem;
+	color: var(--pico-secondary);
+}

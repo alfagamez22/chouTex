@@ -1,7 +1,7 @@
-// public/TexlyreDvipdfmxEngineSetup.js
+// public/ChouTexDvipdfmxEngineSetup.js
 (function () {
   // Set the path for the engine - this must match where the file is actually located
-  window.ENGINE_PATH = './core/swiftlatex/texlyredvipdfm.js';
+  window.ENGINE_PATH = './core/swiftlatex/choutexdvipdfm.js';
 
   // Load the DvipdfmxEngine script dynamically
   const script = document.createElement('script');

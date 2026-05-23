@@ -280,7 +280,7 @@ export const BibliographyProvider: React.FC<BibliographyProviderProps> = ({ chil
 				name: fileName,
 				path: filePath,
 				type: 'file' as const,
-				content: '% Bibliography file created by TeXlyre\n\n',
+				content: '% Bibliography file created by chouTex\n\n',
 				lastModified: Date.now(),
 				size: 0,
 				mimeType: 'text/x-bibtex',

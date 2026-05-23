@@ -1,7 +1,7 @@
 // src/services/ShareTargetService.ts
 import { openDB } from 'idb';
 
-const DB_NAME = 'texlyre-share-target';
+const DB_NAME = 'choutex-share-target';
 const STORE_NAME = 'pending-shares';
 const DB_VERSION = 1;
 const STALE_THRESHOLD_MS = 24 * 60 * 60 * 1000;

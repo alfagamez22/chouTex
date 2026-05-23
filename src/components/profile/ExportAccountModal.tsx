@@ -63,7 +63,7 @@ const ExportAccountModal: React.FC<ExportAccountModalProps> = ({
         {error && <div className="export-error-message">{error}</div>}
 
         <div className="export-info">
-          <p>{t('Export your TeXlyre account data including projects, settings, and collaboration history.')}
+          <p>{t('Export your chouTex account data including projects, settings, and collaboration history.')}
 
 
           </p>
@@ -138,7 +138,7 @@ const ExportAccountModal: React.FC<ExportAccountModalProps> = ({
           </label>
         </div>
 
-        <div className="export-note info-message">{t('Exported data can be imported into any TeXlyre installation to restore your complete workspace.')}
+        <div className="export-note info-message">{t('Exported data can be imported into any chouTex installation to restore your complete workspace.')}
 
 
         </div>

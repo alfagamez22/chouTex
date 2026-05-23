@@ -23,8 +23,8 @@ const ProjectExportModal: React.FC<ProjectExportModalProps> = ({
 	onClose,
 	selectedProjects,
 }) => {
-	const [exportFormat, setExportFormat] = useState<'texlyre' | 'files-only'>(
-		'texlyre',
+	const [exportFormat, setExportFormat] = useState<'choutex' | 'files-only'>(
+		'choutex',
 	);
 	const [includeDocuments, setIncludeDocuments] = useState(true);
 	const [includeFiles, setIncludeFiles] = useState(true);
@@ -41,7 +41,7 @@ const ProjectExportModal: React.FC<ProjectExportModalProps> = ({
 		try {
 			const options: ExportOptions = {
 				includeAccount: false,
-				includeDocuments: exportFormat === 'texlyre' ? includeDocuments : false,
+				includeDocuments: exportFormat === 'choutex' ? includeDocuments : false,
 				includeFiles,
 				includeTemporaryFiles,
 				format: exportFormat,
@@ -103,24 +103,24 @@ const ProjectExportModal: React.FC<ProjectExportModalProps> = ({
 
 					<div className="dropdown-options">
 						<div
-							className={`dropdown-option ${exportFormat === 'texlyre' ? 'selected' : ''}`}
-							onClick={() => setExportFormat('texlyre')}
+							className={`dropdown-option ${exportFormat === 'choutex' ? 'selected' : ''}`}
+							onClick={() => setExportFormat('choutex')}
 						>
 							<label className="dropdown-option-label">
 								<input
 									type="radio"
 									name="exportFormat"
-									value="texlyre"
-									checked={exportFormat === 'texlyre'}
-									onChange={() => setExportFormat('texlyre')}
+									value="choutex"
+									checked={exportFormat === 'choutex'}
+									onChange={() => setExportFormat('choutex')}
 								/>
 								<div className="option-content">
 									<div className="option-header">
 										<FileTextIcon />
-										<strong>{t('TeXlyre Format')}</strong>
+										<strong>{t('chouTex Format')}</strong>
 									</div>
 									<p>
-										{t('Complete project export including documents, collaboration data, and files. Can be imported back into TeXlyre.')}
+										{t('Complete project export including documents, collaboration data, and files. Can be imported back into chouTex.')}
 									</p>
 								</div>
 							</label>
@@ -153,7 +153,7 @@ const ProjectExportModal: React.FC<ProjectExportModalProps> = ({
 				</div>
 
 				<div className="export-option-group">
-					{exportFormat === 'texlyre' && (
+					{exportFormat === 'choutex' && (
 						<>
 							<label className="export-option-label">
 								<input

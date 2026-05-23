@@ -46,10 +46,10 @@
     "pdf-renderer-text-selection": true,
     "pdf-viewer-auto-scale": true,
     "pdf-viewer-rendering-quality": "high",
-    "repository-proxy-url": "https://proxy.texlyre.org/?url=",
+    "repository-proxy-url": "https://proxy.choutex.org/?url=",
     "latex-sourcemap-enabled": true,
-    "templates-api-url": "https://texlyre.github.io/texlyre-templates/api/templates.json",
-    "theme-plugin": "texlyre-wide-theme",
+    "templates-api-url": "https://choutex.github.io/choutex-templates/api/templates.json",
+    "theme-plugin": "choutex-wide-theme",
     "theme-variant": "dark",
     "typst-auto-compile-on-open": false,
     "typst-default-format": "canvas"

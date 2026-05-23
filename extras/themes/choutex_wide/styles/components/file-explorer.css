@@ -1,0 +1,108 @@
+/* extras/themes/choutex_wide/styles/components/file-explorer.css */
+[data-layout="choutex-wide"] .view-toggle {
+	background-color: var(--accent-background);
+	border-bottom-color: var(--accent-border);
+}
+
+[data-layout="choutex-wide"] .view-toggle button {
+	border-radius: 0;
+	padding: var(--choutex-spacing-sm) var(--choutex-spacing-md);
+	color: var(--text-color);
+	opacity: 0.7;
+	font-weight: 500;
+	font-size: 0.85rem;
+	transition: all var(--choutex-transition-fast);
+}
+
+[data-layout="choutex-wide"] .view-toggle button:hover {
+	opacity: 1;
+	background-color: rgba(var(--pico-primary-rgb, 16, 149, 193), 0.1);
+}
+
+[data-layout="choutex-wide"] .view-toggle button.active {
+	opacity: 1;
+	background-color: rgba(var(--pico-primary-rgb, 16, 149, 193), 0.15);
+	border-bottom: 2px solid var(--pico-primary);
+	font-weight: 600;
+}
+
+[data-layout="choutex-wide"] .file-explorer-header {
+	padding: var(--choutex-spacing-md) var(--choutex-spacing-lg);
+	background-color: var(--accent-background);
+	border-bottom-color: var(--accent-border);
+}
+
+[data-layout="choutex-wide"] .file-explorer-header h3 {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+[data-layout="choutex-wide"] .action-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border-radius: var(--choutex-radius-sm);
+	background-color: transparent;
+	border: none;
+	color: var(--text-color);
+	opacity: 0.7;
+	transition: all var(--choutex-transition-fast);
+}
+
+[data-layout="choutex-wide"] .action-btn:hover {
+	opacity: 1;
+	background-color: rgba(var(--pico-primary-rgb, 16, 149, 193), 0.1);
+}
+
+[data-layout="choutex-wide"] .file-tree {
+	padding: var(--choutex-spacing-sm) 0;
+}
+
+[data-layout="choutex-wide"] .file-node {
+	padding: var(--choutex-spacing-sm) var(--choutex-spacing-lg);
+	margin: 1px var(--choutex-spacing-sm);
+	border-radius: var(--choutex-radius-sm);
+	transition: all var(--choutex-transition-fast);
+	color: var(--text-color);
+}
+
+[data-layout="choutex-wide"] .file-node:hover {
+	background-color: rgba(var(--pico-primary-rgb, 16, 149, 193), 0.1);
+}
+
+[data-layout="choutex-wide"] .file-node.selected {
+	background-color: rgba(var(--pico-primary-rgb, 16, 149, 193), 0.15);
+	font-weight: 500;
+}
+
+[data-layout="choutex-wide"] .file-node.drag-over {
+	background-color: rgba(var(--pico-primary-rgb, 16, 149, 193), 0.2);
+	outline: 1px dashed var(--pico-primary);
+}
+
+[data-layout="choutex-wide"] .file-icon {
+	color: var(--pico-secondary);
+}
+
+[data-layout="choutex-wide"] .file-node.selected .file-icon {
+	color: var(--pico-primary);
+}
+
+[data-layout="choutex-wide"] .file-name {
+	font-size: 0.9rem;
+	color: var(--text-color);
+}
+
+[data-layout="choutex-wide"] .directory-children {
+	margin-left: var(--choutex-spacing-lg);
+}
+
+[data-layout="choutex-wide"] .empty-state,
+[data-layout="choutex-wide"] .loading {
+	color: var(--pico-secondary);
+	padding: var(--choutex-spacing-lg);
+	text-align: center;
+	font-size: 0.9rem;
+}

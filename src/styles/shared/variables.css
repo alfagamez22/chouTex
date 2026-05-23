@@ -27,19 +27,20 @@
 	--button-height-xl: 56px;
 
 	/* Border Radius */
-	--radius-sm: 4px;
-	--radius-md: 6px;
-	--radius-lg: 8px;
+	--radius-sm: 6px;
+	--radius-md: 10px;
+	--radius-lg: 14px;
 
 	/* Transitions */
-	--transition-fast: 0.15s;
-	--transition-normal: 0.25s;
-	--transition-slow: 0.4s;
+	--transition-fast: 0.12s var(--transition-shoji);
+	--transition-normal: 0.28s var(--transition-shoji);
+	--transition-slow: 0.45s var(--transition-shoji);
+	--transition-shoji: cubic-bezier(0.25, 1, 0.5, 1);
 
 	/* Shadows */
-	--shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-	--shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
-	--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+	--shadow-sm: 0 2px 8px rgba(44, 53, 44, 0.04);
+	--shadow-md: 0 8px 16px rgba(44, 53, 44, 0.08);
+	--shadow-lg: 0 16px 32px rgba(44, 53, 44, 0.12);
 
 	/* Z-Index Scale */
 	--z-banner-above-user: 200;

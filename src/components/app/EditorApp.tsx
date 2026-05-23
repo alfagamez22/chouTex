@@ -3,7 +3,7 @@ import { t } from '@/i18n';
 import type React from 'react';
 import { useEffect, useRef, useState } from 'react';
 
-import texlyreLogo from '../../assets/images/TeXlyre_notext.png';
+import choutexLogo from '../../assets/images/chouTex_notext.png';
 import { ChatProvider } from '../../contexts/ChatContext';
 import { CollabProvider } from '../../contexts/CollabContext';
 import { FileSyncProvider } from '../../contexts/FileSyncContext';
@@ -581,10 +581,10 @@ const EditorAppView: React.FC<EditorAppProps> = ({
           <TypesetterInfo type={projectType} />
         </div>
 
-        <p className="read-the-docs">{t('Built with TeXlyre')}
+        <p className="read-the-docs">{t('Built with chouTex')}
 
-          <a href="https://texlyre.github.io" target="_blank" rel="noreferrer">
-            <img src={texlyreLogo} className="logo" alt={t('TeXlyre logo')} />
+          <a href="https://choutex.github.io" target="_blank" rel="noreferrer">
+            <img src={choutexLogo} className="logo" alt={t('chouTex logo')} />
           </a>
           <span className="legal-links">
 
@@ -594,10 +594,10 @@ const EditorAppView: React.FC<EditorAppProps> = ({
             }} className="shortcuts-link">{t('Keyboard Map')}
 
             </a>
-            {' '} • <a href="https://texlyre.github.io/docs/intro" target="_blank" rel="noreferrer">{t('Documentation')}
+            {' '} • <a href="https://choutex.github.io/docs/intro" target="_blank" rel="noreferrer">{t('Documentation')}
 
             </a>
-            {' '} • <a href="https://github.com/TeXlyre/texlyre" target="_blank" rel="noreferrer">{t('Source Code')}
+            {' '} • <a href="https://github.com/chouTex/choutex" target="_blank" rel="noreferrer">{t('Source Code')}
 
             </a>
             {' '} • <a href="#" onClick={(event) => {

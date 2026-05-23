@@ -62,7 +62,7 @@ var EngineStatus;
     EngineStatus[EngineStatus["Busy"] = 3] = "Busy";
     EngineStatus[EngineStatus["Error"] = 4] = "Error";
 })(EngineStatus = exports.EngineStatus || (exports.EngineStatus = {}));
-var XDVPDFMX_ENGINE_PATH = './core/swiftlatex/texlyredvipdfm.js';
+var XDVPDFMX_ENGINE_PATH = './core/swiftlatex/choutexdvipdfm.js';
 var CompileResult = /** @class */ (function () {
     function CompileResult() {
         this.pdf = undefined;

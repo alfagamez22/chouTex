@@ -1,11 +1,11 @@
-# TeXlyre
+# chouTex
 
 A **[local-first](https://www.inkandswitch.com/essay/local-first/)** real-time [LaTeX](https://www.latex-project.org/) and [Typst](https://typst.app) collaboration platform with offline editing capabilities. Built with React, TypeScript, and Yjs for collaborative document editing.
 
-[![GitHub Pages](https://img.shields.io/badge/🟢%20Live-GitHub%20Pages-181717.svg?logo=github)](https://texlyre.github.io/texlyre)
-[![Tests](https://img.shields.io/github/actions/workflow/status/texlyre/texlyre/test.yml?label=tests)](https://github.com/texlyre/texlyre/actions)
-[![Deploy](https://img.shields.io/github/actions/workflow/status/texlyre/texlyre/deploy.yml?label=deploy)](https://github.com/texlyre/texlyre/actions)
-[![Crowdin](https://badges.crowdin.net/texlyre/localized.svg)](https://crowdin.com/project/texlyre)
+[![GitHub Pages](https://img.shields.io/badge/🟢%20Live-GitHub%20Pages-181717.svg?logo=github)](https://choutex.github.io/choutex)
+[![Tests](https://img.shields.io/github/actions/workflow/status/choutex/choutex/test.yml?label=tests)](https://github.com/choutex/choutex/actions)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/choutex/choutex/deploy.yml?label=deploy)](https://github.com/choutex/choutex/actions)
+[![Crowdin](https://badges.crowdin.net/choutex/localized.svg)](https://crowdin.com/project/choutex)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18+-61DAFB.svg)](https://reactjs.org/)
@@ -16,27 +16,27 @@ A **[local-first](https://www.inkandswitch.com/essay/local-first/)** real-time [
 
 ### Real-time Collaboration
 
-TeXlyre enables multi-user editing with live cursors and selections visible across all connected clients. The platform uses **[Yjs](https://github.com/yjs/yjs) CRDTs** for conflict-free synchronization, ensuring that changes from multiple users are automatically merged without conflicts. Communication happens through **WebRTC** peer-to-peer connections, providing low-latency collaboration without requiring a central server. An integrated chat system allows collaborators to communicate directly within the editing environment.
+chouTex enables multi-user editing with live cursors and selections visible across all connected clients. The platform uses **[Yjs](https://github.com/yjs/yjs) CRDTs** for conflict-free synchronization, ensuring that changes from multiple users are automatically merged without conflicts. Communication happens through **WebRTC** peer-to-peer connections, providing low-latency collaboration without requiring a central server. An integrated chat system allows collaborators to communicate directly within the editing environment.
 
 <p align="center">
 <img src="showcase/collab_cursor_zoomed.png" alt="Multiple users editing simultaneously with different colored cursors" >
 </p>
 
-TeXlyre provides comment and chat features for real-time exchanges, reviews, and discussions among collaborators.
+chouTex provides comment and chat features for real-time exchanges, reviews, and discussions among collaborators.
 
 <p align="center">
 <img src="showcase/chat_zoomed.png" alt="Collaborators using the chat panel to discuss progress">
 </p>
 
-TeXlyre also includes an embedded diagram editor powered by [Draw.io](https://www.drawio.com/), enabling collaborators to create and edit diagrams in real-time directly within a project.
+chouTex also includes an embedded diagram editor powered by [Draw.io](https://www.drawio.com/), enabling collaborators to create and edit diagrams in real-time directly within a project.
 
 <p align="center">
-<img src="showcase/collab_cursor_drawio.png" alt="Collaborators editing a draw.io diagram simultaneously within a TeXlyre project">
+<img src="showcase/collab_cursor_drawio.png" alt="Collaborators editing a draw.io diagram simultaneously within a chouTex project">
 </p>
 
 ### LaTeX Compilation
 
-The platform integrates **[SwiftLaTeX](https://github.com/SwiftLaTeX/SwiftLaTeX (TeX Live 2020)) and [BusyTeX (TeX Live 2026)](https://github.com/busytex/busytex) WASM engines** to provide in-browser LaTeX compilation without server dependencies. Currently supports **pdfTeX**, **XeTeX**, and **LuaTeX** engines for document processing. TeXlyre supports real-time syntax highlighting and error detection, with an integrated PDF viewer that offers zoom, navigation, and side-by-side editing capabilities.
+The platform integrates **[SwiftLaTeX](https://github.com/SwiftLaTeX/SwiftLaTeX (TeX Live 2020)) and [BusyTeX (TeX Live 2026)](https://github.com/busytex/busytex) WASM engines** to provide in-browser LaTeX compilation without server dependencies. Currently supports **pdfTeX**, **XeTeX**, and **LuaTeX** engines for document processing. chouTex supports real-time syntax highlighting and error detection, with an integrated PDF viewer that offers zoom, navigation, and side-by-side editing capabilities.
 
 <p align="center">
 <img src="showcase/error_parser_zoomed_latex.png" alt="LaTeX compilation in progress with error panel and PDF output" width="600">
@@ -59,7 +59,7 @@ The platform integrates **[typst.ts](https://github.com/Myriad-Dreamin/typst.ts)
 
 ### Local-first Architecture
 
-TeXlyre prioritizes data ownership and offline capability. All documents are stored locally using **IndexedDB**, enabling full offline editing with automatic synchronization when connectivity returns. The File System Access API provides direct folder synchronization for external backup solutions, while project export and import features ensure complete data portability across devices and installations.
+chouTex prioritizes data ownership and offline capability. All documents are stored locally using **IndexedDB**, enabling full offline editing with automatic synchronization when connectivity returns. The File System Access API provides direct folder synchronization for external backup solutions, while project export and import features ensure complete data portability across devices and installations.
 
 ### File Management and Synchronization
 
@@ -69,23 +69,23 @@ The platform includes a file explorer supporting drag-and-drop operations for va
 
 ### Editor Tools
 
-TeXlyre includes editor-level tools designed to improve mathematical authoring and document quality. These tools operate entirely in the browser, work offline, and remain synchronized across collaborators in real time.
+chouTex includes editor-level tools designed to improve mathematical authoring and document quality. These tools operate entirely in the browser, work offline, and remain synchronized across collaborators in real time.
 
-TeXlyre provides built-in document statistics to help authors track progress while writing. Word counts are computed using **[TeXcount](https://app.uio.no/ifi/texcount/)** for LaTeX documents and **[typst-wordometer](https://github.com/Jollywatt/typst-wordometer)** for Typst documents, delivering accurate statistics that reflect the structure of each language rather than raw text length.
+chouTex provides built-in document statistics to help authors track progress while writing. Word counts are computed using **[TeXcount](https://app.uio.no/ifi/texcount/)** for LaTeX documents and **[typst-wordometer](https://github.com/Jollywatt/typst-wordometer)** for Typst documents, delivering accurate statistics that reflect the structure of each language rather than raw text length.
 
 <p align="center">
   <img src="showcase/statistics_modal.svg"
        alt="Statistics modal showing word counts, with arrow pointing to the statistics button">
 </p>
 
-To maintain clean and readable source files, TeXlyre includes formatting tools for both LaTeX and Typst. LaTeX documents are formatted using **[tex-fmt](https://github.com/WGUNDERWOOD/tex-fmt)**, while Typst documents use **[typstyle](https://github.com/typstyle-rs/typstyle)**, applying consistent indentation and line separation without altering document semantics.
+To maintain clean and readable source files, chouTex includes formatting tools for both LaTeX and Typst. LaTeX documents are formatted using **[tex-fmt](https://github.com/WGUNDERWOOD/tex-fmt)**, while Typst documents use **[typstyle](https://github.com/typstyle-rs/typstyle)**, applying consistent indentation and line separation without altering document semantics.
 
 <p align="center">
   <img src="showcase/format_latex_before_after.svg"
        alt="Source code before and after formatting, with arrow pointing to the formatting button">
 </p>
 
-Mathematical expressions can be edited interactively using inline previews powered by **[MathLive](https://github.com/arnog/mathlive)**. When hovering over or placing the cursor inside a math expression, TeXlyre renders the formula directly and allows it to be edited using the MathLive virtual keyboard, making equations easier to create and modify.
+Mathematical expressions can be edited interactively using inline previews powered by **[MathLive](https://github.com/arnog/mathlive)**. When hovering over or placing the cursor inside a math expression, chouTex renders the formula directly and allows it to be edited using the MathLive virtual keyboard, making equations easier to create and modify.
 
 <p align="center">
   <img src="showcase/mathlive_hover_edit_before_after.svg"
@@ -94,25 +94,25 @@ Mathematical expressions can be edited interactively using inline previews power
 
 ### Language Server Protocol (LSP)
 
-TeXlyre offers limited LSP support over WebSocket. The CodeMirror editor acts as a client for LSP servers deployed locally. As an example, TeXlyre integrates with a locally-run Harper LS grammar and spell checker (see the [Harper LS recipe](https://texlyre.github.io/docs/supported-lsp/harper-ls) for instructions on how to deploy and integrate the server with TeXlyre).
+chouTex offers limited LSP support over WebSocket. The CodeMirror editor acts as a client for LSP servers deployed locally. As an example, chouTex integrates with a locally-run Harper LS grammar and spell checker (see the [Harper LS recipe](https://choutex.github.io/docs/supported-lsp/harper-ls) for instructions on how to deploy and integrate the server with chouTex).
 
 <p align="center">
   <img src="showcase/harper_ls_zoomed.png"
-       alt="TeXlyre LSP client receiving grammar and spell-checking actions over WebSocket from the Harper LS server">
+       alt="chouTex LSP client receiving grammar and spell-checking actions over WebSocket from the Harper LS server">
 </p>
 
 ## Quick Start
 
 
-For detailed installation instructions, advanced configuration, and development workflows, see the [installation documentation](https://texlyre.github.io/docs/installation). 
+For detailed installation instructions, advanced configuration, and development workflows, see the [installation documentation](https://choutex.github.io/docs/installation). 
 
-For configuring TeXlyre's theme, properties, and supported plugins, see the [configuration documentation](https://texlyre.github.io/docs/configuration#configuration-files). 
+For configuring chouTex's theme, properties, and supported plugins, see the [configuration documentation](https://choutex.github.io/docs/configuration#configuration-files). 
 
 Installation requires Node.js 20+ and a modern browser with File System Access API support:
 
 ```bash
-git clone https://github.com/TeXlyre/texlyre.git
-cd texlyre
+git clone https://github.com/chouTex/choutex.git
+cd choutex
 npm install
 npm run start
 ```
@@ -127,13 +127,13 @@ Moreover, you can start your project from a template and share the link with you
 
 ## Architecture
 
-TeXlyre's architecture emphasizes **local-first principles** while enabling real-time collaboration. The React frontend communicates with Yjs documents stored in IndexedDB, providing offline-first functionality. WebRTC establishes direct peer connections for real-time synchronization, while **[SwiftLaTeX](https://github.com/SwiftLaTeX/SwiftLaTeX),[texlyre-busytex](https://github.com/TeXlyre/texlyre-busytex)** and **[typst.ts](https://github.com/Myriad-Dreamin/typst.ts)** handle LaTeX and Typst compilation entirely in the browser.
+chouTex's architecture emphasizes **local-first principles** while enabling real-time collaboration. The React frontend communicates with Yjs documents stored in IndexedDB, providing offline-first functionality. WebRTC establishes direct peer connections for real-time synchronization, while **[SwiftLaTeX](https://github.com/SwiftLaTeX/SwiftLaTeX),[choutex-busytex](https://github.com/chouTex/choutex-busytex)** and **[typst.ts](https://github.com/Myriad-Dreamin/typst.ts)** handle LaTeX and Typst compilation entirely in the browser.
 
 The **plugin system** allows extensibility through custom viewers, renderers, and backup providers. Core plugins handle PDF rendering, Bibliography cleaning, LaTeX and Typst log visualization, an embedded **[Draw.io](https://drawio.com)** diagram editor with collaborative support, **[Zotero](https://www.zotero.org/)** and **[OpenAlex](https://www.openalex.org/)** reference search, import, and update panel, file system backups, and repository backups to/from GitHub, GitLab, Gitea, and Codeberg (Forgejo). Theme plugins also provide customizable layouts and visual styles.
 
 <p align="center">
   <img src="showcase/zotero_bib_panel.png"
-       alt="Bib Editor plugin integrated into the TeXlyre app along with Zotero integration panel">
+       alt="Bib Editor plugin integrated into the chouTex app along with Zotero integration panel">
 </p>
 
 
@@ -141,7 +141,7 @@ The **plugin system** allows extensibility through custom viewers, renderers, an
 
 ### Local File System
 
-The File System Access API enables direct synchronization with local folders, supporting cross-device workflows through cloud storage providers like Dropbox or Google Drive. Users can connect TeXlyre projects to existing file system structures, maintaining compatibility with traditional LaTeX and Typst workflows.
+The File System Access API enables direct synchronization with local folders, supporting cross-device workflows through cloud storage providers like Dropbox or Google Drive. Users can connect chouTex projects to existing file system structures, maintaining compatibility with traditional LaTeX and Typst workflows.
 
 ### Peer-to-peer Sharing
 
@@ -159,27 +159,27 @@ interface ViewerPlugin extends Plugin {
 }
 ```
 
-Plugins can extend TeXlyre with custom file viewers, LaTeX/Typst log processors, backup providers, and theme variations (including a mobile theme). The plugin registry automatically discovers and loads compatible plugins during application initialization.
+Plugins can extend chouTex with custom file viewers, LaTeX/Typst log processors, backup providers, and theme variations (including a mobile theme). The plugin registry automatically discovers and loads compatible plugins during application initialization.
 
 Once a plugin is developed, it can be registered in the `plugins.config.ts` by simply adding its path (excluding the '/extras' prefix). All plugins must be placed in the 'extras' directory to be recognized by the system. 
 
-Configuration may be overriden by the `texlyre.config.ts` depending on your installation. **ALWAYS** set the plugin path as well in `texlyre.config.ts` for guaranteed persistence of the config (see the [configuration documentation](https://texlyre.github.io/docs/configuration#configuration-files))
+Configuration may be overriden by the `choutex.config.ts` depending on your installation. **ALWAYS** set the plugin path as well in `choutex.config.ts` for guaranteed persistence of the config (see the [configuration documentation](https://choutex.github.io/docs/configuration#configuration-files))
 
 ## Browser Compatibility
 
-TeXlyre requires modern browser features for optimal functionality.
+chouTex requires modern browser features for optimal functionality.
 
 * **Chrome and Edge** provide full feature support, including the File System Access API and WebRTC.
 * **Firefox** supports core collaboration features but has limited file system integration.
 * **Safari** offers partial compatibility with reduced file system access capabilities.
 
-The File System API was not thoroughly tested with mobile device browsers; therefore, use the file system backup feature on TeXlyre with caution.
+The File System API was not thoroughly tested with mobile device browsers; therefore, use the file system backup feature on chouTex with caution.
 
 WebRTC support is required for real-time collaboration, while the File System Access API enables backup and synchronization features in supported browsers.
 
 ## PWA Support
 
-TeXlyre can be installed as a Progressive Web App (PWA), allowing it to run like a native app on supported devices. After installing the PWA (for example, on Android phones), you can share files directly to TeXlyre to open them, including regular files, ZIP archives, and TeXlyre project ZIP files.
+chouTex can be installed as a Progressive Web App (PWA), allowing it to run like a native app on supported devices. After installing the PWA (for example, on Android phones), you can share files directly to chouTex to open them, including regular files, ZIP archives, and chouTex project ZIP files.
 
 PWA support on iOS may have platform-specific limitations compared to desktop or Android browsers, including reduced file-sharing capabilities.
 
@@ -187,7 +187,7 @@ PWA support on iOS may have platform-specific limitations compared to desktop or
 
 ## Privacy & Data
 
-TeXlyre is privacy-focused by design:
+chouTex is privacy-focused by design:
 
 - **Local-first**: All your data stays in your browser
 - **Direct connections**: Peer-to-peer collaboration without server intermediaries  
@@ -200,22 +200,22 @@ The optional GitHub, GitLab, Gitea, and Forgejo (Codeberg) integration only acti
 
 ## Infrastructure & Self-Hosting
 
-TeXlyre uses open source signaling servers for WebRTC connections:
+chouTex uses open source signaling servers for WebRTC connections:
 
-- **[Y-WebRTC Signaling](https://github.com/TeXlyre/y-webrtc-server)**: Based on [y-webrtc](https://github.com/yjs/y-webrtc)
-- **[PeerJS Signaling](https://github.com/TeXlyre/peerjs-server)**: Based on [PeerJS Server](https://github.com/peers/peerjs-server)
-- **[FilePizza Server](https://github.com/TeXlyre/filepizza-server)**: Based on [FilePizza](https://github.com/kern/filepizza) which relies on PeerJS (built-in TURN containers are not deployed on TeXlyre servers)
-- **[TeX Live 2020 Download Server](https://github.com/TeXlyre/texlive-ondemand-server)**: Based on [SwiftLaTeX Texlive On-Demand Server](https://github.com/SwiftLaTeX/Texlive-Ondemand)
-- **[TeX Live 2026 Download Server](https://github.com/TeXlyre/texlyre-busytex-build/tree/main/texlive-server)**: Custom server for providing TeX Live packages
-- **[Git Repository Proxy Server](https://github.com/TeXlyre/repository-proxy-server)**: Custom server for downloading repositories from GitHub, GitLab, and Codeberg
+- **[Y-WebRTC Signaling](https://github.com/chouTex/y-webrtc-server)**: Based on [y-webrtc](https://github.com/yjs/y-webrtc)
+- **[PeerJS Signaling](https://github.com/chouTex/peerjs-server)**: Based on [PeerJS Server](https://github.com/peers/peerjs-server)
+- **[FilePizza Server](https://github.com/chouTex/filepizza-server)**: Based on [FilePizza](https://github.com/kern/filepizza) which relies on PeerJS (built-in TURN containers are not deployed on chouTex servers)
+- **[TeX Live 2020 Download Server](https://github.com/chouTex/texlive-ondemand-server)**: Based on [SwiftLaTeX Texlive On-Demand Server](https://github.com/SwiftLaTeX/Texlive-Ondemand)
+- **[TeX Live 2026 Download Server](https://github.com/chouTex/choutex-busytex-build/tree/main/texlive-server)**: Custom server for providing TeX Live packages
+- **[Git Repository Proxy Server](https://github.com/chouTex/repository-proxy-server)**: Custom server for downloading repositories from GitHub, GitLab, and Codeberg
 
 All servers are hosted locally and made publicly available with [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
 
-You can run your own signaling servers by following the setup instructions in our [infrastructure repository](https://github.com/texlyre/texlyre-infrastructure).
+You can run your own signaling servers by following the setup instructions in our [infrastructure repository](https://github.com/choutex/choutex-infrastructure).
 
 ## Acknowledgments
 
-TeXlyre builds upon several key technologies:
+chouTex builds upon several key technologies:
 
 ### Core Technologies
 - **[SwiftLaTeX](https://github.com/SwiftLaTeX/SwiftLaTeX)** - WASM-based LaTeX compilation engine
@@ -250,16 +250,16 @@ TeXlyre builds upon several key technologies:
 - **[WebPerl](https://github.com/haukex/webperl)** - Perl interpreter compiled to WebAssembly
 - **[wasm-bindgen](https://github.com/wasm-bindgen/wasm-bindgen)** - Rust/Wasm interoperability
 
-Development of TeXlyre was assisted by **Anthropic Claude** for debugging and architectural guidance.
+Development of chouTex was assisted by **Anthropic Claude** for debugging and architectural guidance.
 
 ## License
 
-TeXlyre is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+chouTex is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
 See [LICENSE](LICENSE) for the complete license text.
 
 ## Funding
 
-[TeXlyre is funded by NLnet](https://nlnet.nl/project/Texlyre/) through the NGI0 Commons Fund, which is supported by the European Commission's Next Generation Internet programme. 
+[chouTex is funded by NLnet](https://nlnet.nl/project/ChouTex/) through the NGI0 Commons Fund, which is supported by the European Commission's Next Generation Internet programme. 
 
 <p align="center">
   <img src="showcase/sponsors_banner.svg"
@@ -269,6 +269,6 @@ See [LICENSE](LICENSE) for the complete license text.
 ---
 
 **Ready to start collaborating?** 
-[Get started with TeXlyre](https://texlyre.github.io/texlyre/) 
+[Get started with chouTex](https://choutex.github.io/choutex/) 
 **or** 
 [contribute to the project with bug fixes, new features, plugins, and translations](CONTRIBUTING.md).

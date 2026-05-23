@@ -58,7 +58,7 @@ export const createJabRefLSP = () => {
             fileExtensions: config.getSupportedFileTypes(),
             transportConfig: getTransportConfig(),
             clientConfig: {
-                rootUri: 'texlyre://bibliography',
+                rootUri: 'choutex://bibliography',
             },
         });
     };
@@ -147,7 +147,7 @@ export const createJabRefLSP = () => {
 
         try {
             const response = await (client as any).request('textDocument/completion', {
-                textDocument: { uri: 'texlyre://bibliography' },
+                textDocument: { uri: 'choutex://bibliography' },
                 position: { line: 0, character: 0 }
             });
 

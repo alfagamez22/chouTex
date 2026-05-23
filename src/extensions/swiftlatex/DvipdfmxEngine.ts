@@ -22,8 +22,8 @@ export class DvipdfmxEngine extends BaseEngine {
 	constructor() {
 		const config: EngineConfig = {
 			name: 'Dvipdfmx',
-			setupScript: `${BASE_PATH}/core/swiftlatex/TexlyreDvipdfmxEngineSetup.js`,
-			engineScript: `${BASE_PATH}/core/swiftlatex/texlyredvipdfm.js`,
+			setupScript: `${BASE_PATH}/core/swiftlatex/ChouTexDvipdfmxEngineSetup.js`,
+			engineScript: `${BASE_PATH}/core/swiftlatex/choutexdvipdfm.js`,
 			engineClass: 'DvipdfmxEngine',
 		};
 		super(config);

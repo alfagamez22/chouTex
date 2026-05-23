@@ -9,8 +9,8 @@ import pdfViewersPlugin from './viewers/pdf';
 import pdfRenderersPlugin from './renderers/pdf';
 import latex_visualizerLoggersPlugin from './loggers/latex_visualizer';
 import githubBackupPlugin from './backup/github';
-import texlyre_slimThemesPlugin from './themes/texlyre_slim';
-import texlyre_wideThemesPlugin from './themes/texlyre_wide';
+import choutex_slimThemesPlugin from './themes/choutex_slim';
+import choutex_wideThemesPlugin from './themes/choutex_wide';
 
 // Export individual plugins
 export {
@@ -21,8 +21,8 @@ export {
   pdfRenderersPlugin,
   latex_visualizerLoggersPlugin,
   githubBackupPlugin,
-  texlyre_slimThemesPlugin,
-  texlyre_wideThemesPlugin
+  choutex_slimThemesPlugin,
+  choutex_wideThemesPlugin
 };
 
 // Export collaborative_viewers plugins as a group
@@ -54,7 +54,7 @@ export const backup = {
 
 // Export themes plugins as a group
 export const themes = {
-  texlyre_slimThemesPlugin,
-  texlyre_wideThemesPlugin
+  choutex_slimThemesPlugin,
+  choutex_wideThemesPlugin
 };
 

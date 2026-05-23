@@ -60,7 +60,7 @@ const UrlImportModal: React.FC<UrlImportModalProps> = ({
       type: 'text',
       label: t('Repository proxy URL'),
       description: t('Proxy URL to prepend ONLY to repository ZIP downloads to circumvent CORS policy (optional)'),
-      defaultValue: 'https://proxy.texlyre.org/?url=',
+      defaultValue: 'https://proxy.choutex.org/?url=',
       onChange: (value) => {
         setRepositoryProxyUrl(value as string);
       }

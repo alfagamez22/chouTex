@@ -3,7 +3,7 @@
 export type UserDataType = 'settings' | 'properties' | 'secrets' | 'all';
 
 export const getUserDataKey = (userId: string, type: Exclude<UserDataType, 'all'>): string => {
-  return `texlyre-user-${userId}-${type}`;
+  return `choutex-user-${userId}-${type}`;
 };
 
 export const getUserData = <T = any>(userId: string, type: Exclude<UserDataType, 'all'>): T | null => {
@@ -56,7 +56,7 @@ export const downloadUserData = async (userId: string, type: UserDataType): Prom
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `texlyre-userdata-${type}-${Date.now()}.json`;
+  a.download = `choutex-userdata-${type}-${Date.now()}.json`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

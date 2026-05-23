@@ -206,7 +206,7 @@ class GenericLSPService {
         const sendInitialize = () => {
             const initParams: any = {
                 processId: null,
-                clientInfo: { name: 'TeXlyre' },
+                clientInfo: { name: 'chouTex' },
                 rootUri: (clientConfig as any).rootUri ?? null,
                 workspaceFolders: (clientConfig as any).workspaceFolders ?? [],
                 capabilities: self.mergeCapabilities(defaultClientCapabilities, userCapabilities),

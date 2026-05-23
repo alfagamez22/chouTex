@@ -770,10 +770,10 @@ class FileSyncService {
 	}
 
 	private areNotificationsEnabled(): boolean {
-		const userId = localStorage.getItem('texlyre-current-user');
+		const userId = localStorage.getItem('choutex-current-user');
 		const storageKey = userId
-			? `texlyre-user-${userId}-settings`
-			: 'texlyre-settings';
+			? `choutex-user-${userId}-settings`
+			: 'choutex-settings';
 		try {
 			const settings = JSON.parse(localStorage.getItem(storageKey) || '{}');
 			return settings['file-sync-notifications'] !== false;

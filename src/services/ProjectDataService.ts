@@ -86,7 +86,7 @@ export class ProjectDataService {
 		const projectId = project.docUrl.startsWith('yjs:')
 			? project.docUrl.slice(4)
 			: project.docUrl;
-		const dbName = `texlyre-project-${projectId}`;
+		const dbName = `choutex-project-${projectId}`;
 		const metadataCollection = `${dbName}-yjs_metadata`;
 
 		try {
@@ -269,7 +269,7 @@ export class ProjectDataService {
 		projectDescription?: string,
 		projectType?: 'latex' | 'typst',
 	): Promise<void> {
-		const dbName = `texlyre-project-${projectId}`;
+		const dbName = `choutex-project-${projectId}`;
 		const metadataCollection = `${dbName}-yjs_metadata`;
 
 		console.log(
@@ -447,7 +447,7 @@ export class ProjectDataService {
 			);
 
 			// Fallback to direct database access if fileStorageService fails
-			const dbName = `texlyre-project-${docId}`;
+			const dbName = `choutex-project-${docId}`;
 			const db = await openDB(dbName, 1, {
 				upgrade(db) {
 					if (!db.objectStoreNames.contains('files')) {

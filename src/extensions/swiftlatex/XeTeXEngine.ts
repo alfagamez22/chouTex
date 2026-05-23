@@ -22,8 +22,8 @@ export class XeTeXEngine extends BaseEngine {
 	constructor() {
 		const config: EngineConfig = {
 			name: 'XeTeX',
-			setupScript: `${BASE_PATH}/core/swiftlatex/TexlyreXeTeXEngineSetup.js`,
-			engineScript: `${BASE_PATH}/core/swiftlatex/texlyrexetex.js`,
+			setupScript: `${BASE_PATH}/core/swiftlatex/ChouTexXeTeXEngineSetup.js`,
+			engineScript: `${BASE_PATH}/core/swiftlatex/choutexxetex.js`,
 			engineClass: 'XeTeXEngine',
 		};
 		super(config);

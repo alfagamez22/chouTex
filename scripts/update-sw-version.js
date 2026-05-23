@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 async function loadConfig() {
-	const configPath = join(__dirname, '..', 'texlyre.config.ts');
+	const configPath = join(__dirname, '..', 'choutex.config.ts');
 	// Convert to file:// URL for Windows compatibility
 	const fileUrl = new URL(`file://${configPath}`).href;
 	const { default: config } = await import(fileUrl);
@@ -25,8 +25,8 @@ const swContent = readFileSync(swPath, 'utf8');
 
 const updatedContent = swContent
 	.replace(
-		/const CACHE_NAME = `texlyre-v[\d.]+`;/,
-		`const CACHE_NAME = \`texlyre-v${version}\`;`,
+		/const CACHE_NAME = `choutex-v[\d.]+`;/,
+		`const CACHE_NAME = \`choutex-v${version}\`;`,
 	)
 	.replace(
 		/const BASE_PATH = ['"`][^'"`]*['"`];/,

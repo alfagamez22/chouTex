@@ -30,7 +30,7 @@
 }
 
 .project-description {
-  padding: var(--texlyre-spacing-sm);
+  padding: var(--choutex-spacing-sm);
   color: var(--pico-secondary);
   font-size: 0.6rem;
   max-width: var(--project-title-width, 250px);
@@ -41,10 +41,10 @@
 }
 
 .project-description p {
-  margin: var(--texlyre-spacing-sm);
+  margin: var(--choutex-spacing-sm);
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: var(--texlyre-spacing-sm);
+  padding: var(--choutex-spacing-sm);
 }
 
 .project-type-badge {

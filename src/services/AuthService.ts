@@ -10,12 +10,12 @@ import { cleanupProjectDatabases } from '../utils/dbDeleteUtils';
 import { fileSystemBackupService } from './FileSystemBackupService';
 
 const shouldAutoSync = (): boolean => {
-	return localStorage.getItem('texlyre-auto-sync') === 'true';
+	return localStorage.getItem('choutex-auto-sync') === 'true';
 };
 
 class AuthService {
 	public db: IDBPDatabase | null = null;
-	private readonly DB_NAME = 'texlyre-auth';
+	private readonly DB_NAME = 'choutex-auth';
 	private readonly USER_STORE = 'users';
 	private readonly PROJECT_STORE = 'projects';
 	private readonly DB_VERSION = 1;
@@ -47,7 +47,7 @@ class AuthService {
 				},
 			});
 
-			const userId = localStorage.getItem('texlyre-current-user');
+			const userId = localStorage.getItem('choutex-current-user');
 			if (userId) {
 				try {
 					const user = await this.getUserById(userId);
@@ -55,18 +55,18 @@ class AuthService {
 						if (this.isGuestUser(user) && this.isGuestExpired(user)) {
 							console.log(`[AuthService] Guest session expired: ${userId}`);
 							await this.cleanupExpiredGuest(user);
-							localStorage.removeItem('texlyre-current-user');
+							localStorage.removeItem('choutex-current-user');
 						} else {
 							this.currentUser = user;
 							console.log(`[AuthService] Restored user session: ${user.username} (${this.isGuestUser(user) ? 'guest' : 'full'})`);
 						}
 					} else {
 						console.log(`[AuthService] User not found: ${userId}`);
-						localStorage.removeItem('texlyre-current-user');
+						localStorage.removeItem('choutex-current-user');
 					}
 				} catch (error) {
 					console.error('Error restoring user session:', error);
-					localStorage.removeItem('texlyre-current-user');
+					localStorage.removeItem('choutex-current-user');
 				}
 			}
 
@@ -136,7 +136,7 @@ class AuthService {
 			}
 
 			this.currentUser = guestUser;
-			localStorage.setItem('texlyre-current-user', userId);
+			localStorage.setItem('choutex-current-user', userId);
 
 			console.log(`[AuthService] Successfully created guest account: ${sessionId}`);
 			return guestUser;
@@ -209,7 +209,7 @@ class AuthService {
 		await this.db?.delete(this.USER_STORE, oldGuestId);
 
 		this.currentUser = upgradedUser;
-		localStorage.setItem('texlyre-current-user', newUserId);
+		localStorage.setItem('choutex-current-user', newUserId);
 
 		console.log(`[AuthService] Upgraded guest account ${oldGuestId} to full account: ${username} (${newUserId})`);
 		return upgradedUser;
@@ -399,7 +399,7 @@ class AuthService {
 
 		await this.db?.put(this.USER_STORE, newUser);
 		this.currentUser = newUser;
-		localStorage.setItem('texlyre-current-user', userId);
+		localStorage.setItem('choutex-current-user', userId);
 
 		return newUser;
 	}
@@ -425,7 +425,7 @@ class AuthService {
 		await this.db?.put(this.USER_STORE, user);
 
 		this.currentUser = user;
-		localStorage.setItem('texlyre-current-user', user.id);
+		localStorage.setItem('choutex-current-user', user.id);
 
 		return user;
 	}
@@ -437,7 +437,7 @@ class AuthService {
 		}
 
 		this.currentUser = null;
-		localStorage.removeItem('texlyre-current-user');
+		localStorage.removeItem('choutex-current-user');
 	}
 
 	async updateUser(user: User): Promise<User> {
@@ -482,7 +482,7 @@ class AuthService {
 		const user = await this.getUserById(userId);
 		if (user) {
 			this.currentUser = user;
-			localStorage.setItem('texlyre-current-user', userId);
+			localStorage.setItem('choutex-current-user', userId);
 		}
 		return user;
 	}
@@ -530,7 +530,7 @@ class AuthService {
 			const projectId =
 				Math.random().toString(36).substring(2, 15) +
 				Math.random().toString(36).substring(2, 15);
-			const dbName = `texlyre-project-${projectId}`;
+			const dbName = `choutex-project-${projectId}`;
 			const yjsCollection = `${dbName}-yjs_metadata`;
 
 			const ydoc = new Y.Doc();

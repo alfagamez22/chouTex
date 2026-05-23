@@ -33,11 +33,11 @@ export function useRegisterLSPConfigSettings() {
                 <>
                     {t('Stored LSP server configurations (JSON array)')}{' '}
                     <br />
-                    <a href="https://texlyre.github.io/docs/lsp-with-texlyre" target="_blank" rel="noopener noreferrer">
+                    <a href="https://choutex.github.io/docs/lsp-with-choutex" target="_blank" rel="noopener noreferrer">
                         {t('Learn more about the LSP configuration format')}
                     </a>
                     <br />
-                    <a href="https://texlyre.github.io/docs/category/supported-lsp" target="_blank" rel="noopener noreferrer">
+                    <a href="https://choutex.github.io/docs/category/supported-lsp" target="_blank" rel="noopener noreferrer">
                         {t('Tested LSP servers and setup guides')}
                     </a>
                 </>

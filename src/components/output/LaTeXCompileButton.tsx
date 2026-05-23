@@ -17,7 +17,7 @@ import type { LaTeXOutputFormat, LaTeXEngine } from '../../types/latex';
 import { isLatexFile, isLatexMainFile, isTemporaryFile } from '../../utils/fileUtils';
 import { fileStorageService } from '../../services/FileStorageService';
 import { latexService } from '../../services/LaTeXService';
-import { BUSYTEX_BUNDLE_LABELS } from '../../extensions/texlyre-busytex/BusyTeXService';
+import { BUSYTEX_BUNDLE_LABELS } from '../../extensions/choutex-busytex/BusyTeXService';
 import { ChevronDownIcon, ClearCompileIcon, OptionsIcon, PlayIcon, ResetIcon, StopIcon, TrashIcon } from '../common/Icons';
 
 interface LaTeXCompileButtonProps {

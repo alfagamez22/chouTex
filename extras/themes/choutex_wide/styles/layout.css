@@ -1,0 +1,88 @@
+/* extras/themes/choutex_wide/styles/layout.css */
+[data-layout="choutex-wide"] {
+	--choutex-sidebar-width: 320px;
+	--choutex-header-height: 70px;
+	--choutex-footer-height: 45px;
+}
+
+[data-layout="choutex-wide"] #root {
+	max-width: 100%;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+[data-layout="choutex-wide"] .app-container {
+	display: grid;
+	grid-template-rows: var(--choutex-header-height) 1fr var(
+			--choutex-footer-height
+		);
+	grid-template-columns: minmax(0, 1fr);
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+[data-layout="choutex-wide"] header {
+	grid-row: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 var(--choutex-spacing-xl);
+	background-color: var(--pico-secondary-background);
+	border-bottom: 1px solid var(--accent-border);
+	margin: 0;
+	width: 100vw;
+	z-index: var(--choutex-z-index-sticky);
+	box-shadow: var(--choutex-shadow-sm);
+}
+
+[data-layout="choutex-wide"] .main-content {
+	grid-row: 2;
+	display: flex;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	background-color: var(--pico-background);
+}
+
+[data-layout="choutex-wide"] footer {
+	grid-row: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 var(--choutex-spacing-xl);
+	background-color: transparent;
+	margin: 0;
+}
+
+[data-layout="choutex-wide"] .sidebar-container {
+	height: 100%;
+	min-height: 0;
+	border-radius: 0;
+	border-right: 1px solid var(--accent-border);
+	background-color: var(--sidebar-background);
+	border-color: var(--sidebar-border);
+}
+
+[data-layout="choutex-wide"] .editor-container {
+	flex: 1;
+	height: 100%;
+	border-radius: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--editor-background);
+	color: var(--editor-text);
+}
+
+[data-layout="choutex-wide"] .resize-handle.horizontal {
+	width: 5px;
+	transition: background-color var(--choutex-transition-fast);
+}
+
+[data-layout="choutex-wide"] .resize-handle.horizontal:hover,
+[data-layout="choutex-wide"] .resize-handle.horizontal:active {
+	background-color: var(--pico-primary);
+}

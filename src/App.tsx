@@ -1,5 +1,5 @@
 /*
- * TeXlyre - Collaborative LaTeX Editor
+ * chouTex - Collaborative LaTeX Editor
  * Copyright (C) 2025 Fares Abawi
  *
  * This program is free software: you can redistribute it and/or modify
@@ -84,12 +84,12 @@ function App() {
 
 	useEffect(() => {
 		const getCurrentUserId = (): string | null => {
-			return localStorage.getItem('texlyre-current-user');
+			return localStorage.getItem('choutex-current-user');
 		};
 
 		const getStorageKey = (): string => {
 			const userId = getCurrentUserId();
-			return userId ? `texlyre-user-${userId}-settings` : 'texlyre-settings';
+			return userId ? `choutex-user-${userId}-settings` : 'choutex-settings';
 		};
 
 		const storageKey = getStorageKey();
@@ -123,7 +123,7 @@ function App() {
 						<AuthProvider>
 							<PropertiesProvider>
 								<ThemeProvider
-									defaultThemeId="texlyre-theme"
+									defaultThemeId="choutex-theme"
 									defaultVariant="system"
 								>
 

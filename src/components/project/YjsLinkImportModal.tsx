@@ -56,14 +56,14 @@ const YjsLinkImportModal: React.FC<YjsLinkImportModalProps> = ({
         setError(null);
 
         if (!yjsInput.trim()) {
-            setError(t('Please enter a TeXlyre link'));
+            setError(t('Please enter a chouTex link'));
             return;
         }
 
         const normalized = normalizeYjsInput(yjsInput);
 
         if (!normalized) {
-            setError(t('Invalid TeXlyre link format'));
+            setError(t('Invalid chouTex link format'));
             return;
         }
 
@@ -81,7 +81,7 @@ const YjsLinkImportModal: React.FC<YjsLinkImportModalProps> = ({
         <Modal
             isOpen={isOpen}
             onClose={handleClose}
-            title={t('Open TeXlyre Link')}
+            title={t('Open chouTex Link')}
             icon={ShareIcon}
             size="medium">
             <div className="yjs-link-import-modal">
@@ -92,9 +92,9 @@ const YjsLinkImportModal: React.FC<YjsLinkImportModalProps> = ({
                 )}
 
                 <div className="form-group">
-                    <label htmlFor="yjs-link-input">{t('TeXlyre Link')}</label>
+                    <label htmlFor="yjs-link-input">{t('chouTex Link')}</label>
                     <p className="field-description">
-                        {t('Enter the full TeXlyre link, partial link, or just the YJS ID')}
+                        {t('Enter the full chouTex link, partial link, or just the YJS ID')}
                     </p>
                     <input
                         type="text"
@@ -112,7 +112,7 @@ const YjsLinkImportModal: React.FC<YjsLinkImportModalProps> = ({
 
                 <div className="info-message">
                     <p>
-                        {t('This will open the shared project associated with this TeXlyre link. The project owner must be online to sync data via peer-to-peer connection.')}
+                        {t('This will open the shared project associated with this chouTex link. The project owner must be online to sync data via peer-to-peer connection.')}
                     </p>
                 </div>
             </div>

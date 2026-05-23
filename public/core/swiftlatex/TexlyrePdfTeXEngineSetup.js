@@ -1,7 +1,7 @@
-// public/TexlyrePdfTeXEngineSetup.js
+// public/ChouTexPdfTeXEngineSetup.js
 (function () {
   // Set the path for the engine - this must match where the file is actually located
-  window.ENGINE_PATH = './core/swiftlatex/texlyrepdftex.js';
+  window.ENGINE_PATH = './core/swiftlatex/choutexpdftex.js';
 
   // Load the PdfTeXEngine script dynamically
   const script = document.createElement('script');

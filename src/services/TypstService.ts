@@ -293,8 +293,8 @@ class TypstService {
             const filesToDelete = allFiles.filter((file) => {
                 const path = file.path;
                 return (
-                    (path.startsWith('/.texlyre_src/__output/') ||
-                        path.startsWith('/.texlyre_src/__work/')) &&
+                    (path.startsWith('/.choutex_src/__output/') ||
+                        path.startsWith('/.choutex_src/__work/')) &&
                     file.type === 'file'
                 );
             });
@@ -520,7 +520,7 @@ class TypstService {
         return {
             id: nanoid(),
             name,
-            path: `/.texlyre_src/__output/${name}`,
+            path: `/.choutex_src/__output/${name}`,
             type: 'file',
             content: buffer,
             lastModified: Date.now(),
@@ -549,7 +549,7 @@ class TypstService {
     }
 
     private async ensureOutputDirectoriesExist(): Promise<void> {
-        const directories = ['/.texlyre_src', '/.texlyre_src/__output'];
+        const directories = ['/.choutex_src', '/.choutex_src/__output'];
         const existingFiles = await fileStorageService.getAllFiles();
         const existingPaths = new Set(existingFiles.map((file) => file.path));
 
@@ -672,8 +672,8 @@ class TypstService {
 
     private areNotificationsEnabled(): boolean {
         try {
-            const userId = localStorage.getItem('texlyre-current-user');
-            const storageKey = userId ? `texlyre-user-${userId}-settings` : 'texlyre-settings';
+            const userId = localStorage.getItem('choutex-current-user');
+            const storageKey = userId ? `choutex-user-${userId}-settings` : 'choutex-settings';
             const settings = JSON.parse(localStorage.getItem(storageKey) || '{}');
             return settings['typst-notifications'] !== false;
         } catch {

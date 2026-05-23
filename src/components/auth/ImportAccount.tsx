@@ -36,7 +36,7 @@ const ImportAccount: React.FC<ImportAccountProps> = ({
     }
 
     if (!file.name.endsWith('.zip')) {
-      setError(t('Please select a valid TeXlyre export file (.zip)'));
+      setError(t('Please select a valid chouTex export file (.zip)'));
       return;
     }
 

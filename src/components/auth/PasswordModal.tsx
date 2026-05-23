@@ -18,7 +18,7 @@ const PasswordModal: React.FC<PasswordModalProps> = ({
   isOpen,
   onClose,
   onPasswordSubmit,
-  message = t('Enter your TeXlyre password to access encrypted secrets:'),
+  message = t('Enter your chouTex password to access encrypted secrets:'),
   title = t('Password Required')
 }) => {
   const [password, setPassword] = useState('');

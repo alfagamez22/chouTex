@@ -343,7 +343,7 @@ class SearchService {
             const { IndexeddbPersistence } = await import('y-indexeddb');
             const Y = await import('yjs');
 
-            const dbName = `texlyre-project-${projectId}`;
+            const dbName = `choutex-project-${projectId}`;
             const docCollection = `${dbName}-yjs_${documentId}`;
 
             const docYDoc = new Y.Doc();

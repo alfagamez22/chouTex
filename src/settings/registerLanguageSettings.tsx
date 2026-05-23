@@ -36,7 +36,7 @@ export function useRegisterLanguageSettings() {
                 <div>
                     {t('Select the interface language and view translation coverage')}{' '}
                     <br />
-                    <a href="https://github.com/TeXlyre/texlyre/blob/main/CONTRIBUTING.md#translation--localization" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/chouTex/choutex/blob/main/CONTRIBUTING.md#translation--localization" target="_blank" rel="noopener noreferrer">
                         {t('Help translate or add a language')}
                     </a>
                 </div>

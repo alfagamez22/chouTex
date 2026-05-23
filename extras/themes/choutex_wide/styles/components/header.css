@@ -1,0 +1,114 @@
+/* extras/themes/choutex_wide/styles/components/header.css */
+[data-layout="choutex-wide"] header .logo {
+	height: calc(var(--choutex-header-height) * 0.55);
+	transition: all var(--choutex-transition-normal);
+}
+
+[data-layout="choutex-wide"] header .logo:hover {
+	filter: drop-shadow(0 0 2px var(--pico-primary));
+	transform: scale(1.05);
+}
+
+[data-layout="choutex-wide"] header h1 {
+	font-size: 1.6rem;
+	margin: 0;
+	font-weight: 600;
+	color: var(--pico-primary);
+}
+
+[data-layout="choutex-wide"] .header-left {
+	display: flex;
+	align-items: center;
+	gap: var(--choutex-spacing-lg);
+}
+
+[data-layout="choutex-wide"] .header-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	max-width: 600px;
+}
+
+[data-layout="choutex-wide"] .project-title-header {
+	display: flex;
+	align-items: center;
+	gap: var(--choutex-spacing-sm);
+	max-width: var(--project-title-width, 100%);
+}
+
+[data-layout="choutex-wide"] .project-title-container {
+	display: flex;
+	align-items: center;
+	gap: 0;
+	cursor: pointer;
+	transition: opacity var(--choutex-transition-normal);
+}
+
+[data-layout="choutex-wide"] .project-title {
+	margin: 0;
+	font-size: 0.8rem;
+	color: var(--text-color);
+	font-weight: 600;
+	padding-top: var(--choutex-spacing-xs);
+}
+
+[data-layout="choutex-wide"] .project-description {
+	margin: 2px 0 0 0;
+	padding: 0;
+	color: var(--pico-secondary);
+	font-size: 0.7rem;
+	text-align: center;
+	border: none;
+	max-width: var(--project-title-width, 450px);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+[data-layout="choutex-wide"] .project-description p {
+	margin: var(--choutex-spacing-sm);
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: var(--choutex-spacing-sm);
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+[data-layout="choutex-wide"] .header-right {
+	display: flex;
+	align-items: center;
+	gap: var(--choutex-spacing-md);
+}
+
+[data-layout="choutex-wide"] .theme-selector {
+	display: flex;
+	gap: var(--choutex-spacing-sm);
+	background-color: var(--accent-background);
+	padding: var(--choutex-spacing-xs) var(--choutex-spacing-sm);
+	border-radius: var(--choutex-radius-md);
+	border: 1px solid var(--accent-border);
+}
+
+[data-layout="choutex-wide"] .theme-selector select {
+	padding: var(--choutex-spacing-xs) var(--choutex-spacing-sm);
+	border-radius: var(--choutex-radius-sm);
+	background-color: var(--pico-background);
+	border: 1px solid var(--accent-border);
+	color: var(--text-color);
+	font-size: 0.85rem;
+	transition: all var(--choutex-transition-fast);
+}
+
+[data-layout="choutex-wide"] .theme-selector select:hover {
+	border-color: var(--pico-primary);
+}
+
+[data-layout="choutex-wide"] .theme-selector select:focus {
+	border-color: var(--pico-primary);
+	outline: none;
+	box-shadow: 0 0 0 2px var(--pico-primary-focus);
+}

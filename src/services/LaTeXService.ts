@@ -4,8 +4,8 @@ import { nanoid } from 'nanoid';
 
 import type { CompileResult } from '../extensions/swiftlatex/BaseEngine';
 import { swiftLaTeXService, type SwiftEngineType } from '../extensions/swiftlatex/SwiftLaTeXService';
-import { busyTexService } from '../extensions/texlyre-busytex/BusyTeXService';
-import type { BusyTeXEngineType } from '../extensions/texlyre-busytex/BusyTeXEngine';
+import { busyTexService } from '../extensions/choutex-busytex/BusyTeXService';
+import type { BusyTeXEngineType } from '../extensions/choutex-busytex/BusyTeXEngine';
 import type { FileNode } from '../types/files';
 import { downloadFiles } from '../utils/zipUtils';
 import { fileStorageService } from './FileStorageService';
@@ -393,8 +393,8 @@ class LaTeXService {
 	}
 
 	private areNotificationsEnabled(): boolean {
-		const userId = localStorage.getItem('texlyre-current-user');
-		const storageKey = userId ? `texlyre-user-${userId}-settings` : 'texlyre-settings';
+		const userId = localStorage.getItem('choutex-current-user');
+		const storageKey = userId ? `choutex-user-${userId}-settings` : 'choutex-settings';
 		try {
 			const settings = JSON.parse(localStorage.getItem(storageKey) || '{}');
 			return settings['latex-notifications'] !== false;

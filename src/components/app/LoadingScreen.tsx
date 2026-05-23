@@ -6,7 +6,7 @@ const LoadingScreen: React.FC = () => {
 	return (
 		<div className="loading-container">
 			<div className="loading-spinner" />
-			<p>{t('Loading TeXlyre...')}</p>
+			<p>{t('Loading chouTex...')}</p>
 		</div>);
 
 };

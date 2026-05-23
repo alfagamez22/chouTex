@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.join(__dirname, '..');
 
 async function loadConfig() {
-    const configPath = path.join(rootDir, 'texlyre.config.ts');
+    const configPath = path.join(rootDir, 'choutex.config.ts');
     // Convert to file:// URL for Windows compatibility
     const fileUrl = new URL(`file://${configPath}`).href;
     const { default: config } = await import(fileUrl);
@@ -239,7 +239,7 @@ function generateUserdataFiles(config: any) {
 }
 
 async function main() {
-    console.log('Loading texlyre.config.ts...');
+    console.log('Loading choutex.config.ts...');
     const config = await loadConfig();
 
     console.log('Generating plugins.config.js...');

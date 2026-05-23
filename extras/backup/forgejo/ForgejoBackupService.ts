@@ -50,7 +50,7 @@ export class ForgejoBackupService {
     private secretsContext: SecretsContextType | null = null;
     private lastOperationTime = 0;
     private readonly MIN_OPERATION_INTERVAL = 2000;
-    private readonly PLUGIN_ID = 'texlyre-forgejo-backup';
+    private readonly PLUGIN_ID = 'choutex-forgejo-backup';
     private readonly SECRET_KEYS = {
         TOKEN: 'forgejo-token',
         REPOSITORY: 'selected-repository',
@@ -94,7 +94,7 @@ export class ForgejoBackupService {
 
     private getDefaultCommitMessage(): string {
         const template =
-            this.settingsCache.defaultCommitMessage || 'TeXlyre Backup: {date}';
+            this.settingsCache.defaultCommitMessage || 'chouTex Backup: {date}';
         const now = new Date();
         return template
             .replace('{date}', now.toLocaleDateString())

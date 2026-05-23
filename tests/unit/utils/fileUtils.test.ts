@@ -7,8 +7,8 @@ import {
 describe('File Utils', () => {
     describe('isTemporaryFile', () => {
         it('should identify temporary files', () => {
-            expect(isTemporaryFile('/.texlyre-cache/file.aux')).toBe(true);
-            expect(isTemporaryFile('/.texlyre-temp/build/output.pdf')).toBe(true);
+            expect(isTemporaryFile('/.choutex-cache/file.aux')).toBe(true);
+            expect(isTemporaryFile('/.choutex-temp/build/output.pdf')).toBe(true);
         });
 
         it('should reject non-temporary files', () => {
@@ -20,7 +20,7 @@ describe('File Utils', () => {
         it('should handle edge cases', () => {
             expect(isTemporaryFile('')).toBe(false);
             expect(isTemporaryFile('/')).toBe(false);
-            expect(isTemporaryFile('.texlyre-cache')).toBe(false);
+            expect(isTemporaryFile('.choutex-cache')).toBe(false);
         });
     });
 

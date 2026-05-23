@@ -35,11 +35,11 @@ const ShareTargetModal: React.FC<ShareTargetModalProps> = ({
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [search, setSearch] = useState('');
-    const [isTexlyreStructuredZip, setIsTexlyreStructuredZip] = useState(false);
+    const [isChouTexStructuredZip, setIsChouTexStructuredZip] = useState(false);
 
     const isZip = files.length === 1 && files[0].name.toLowerCase().endsWith('.zip');
 
-    const checkIsTexlyreZip = async (file: PendingShareFile): Promise<boolean> => {
+    const checkIsChouTexZip = async (file: PendingShareFile): Promise<boolean> => {
         try {
             const zipFile = new File([file.buffer], file.name, { type: file.type });
             const scanned = await projectImportService.scanZipFile(zipFile);
@@ -58,9 +58,9 @@ const ShareTargetModal: React.FC<ShareTargetModalProps> = ({
             setNewProjectName(firstName.replace(/\.[^/.]+$/, ''));
 
             if (isZip && files.length === 1) {
-                checkIsTexlyreZip(files[0]).then(setIsTexlyreStructuredZip);
+                checkIsChouTexZip(files[0]).then(setIsChouTexStructuredZip);
             } else {
-                setIsTexlyreStructuredZip(false);
+                setIsChouTexStructuredZip(false);
             }
         }
     }, [isOpen]);
@@ -114,11 +114,11 @@ const ShareTargetModal: React.FC<ShareTargetModalProps> = ({
     };
 
     const handleCreateNew = async (): Promise<void> => {
-        if (!isTexlyreStructuredZip && !newProjectName.trim()) return;
+        if (!isChouTexStructuredZip && !newProjectName.trim()) return;
         setIsSubmitting(true);
         setError(null);
         try {
-            if (isZip && files.length === 1 && isTexlyreStructuredZip) {
+            if (isZip && files.length === 1 && isChouTexStructuredZip) {
                 const zipFile = new File([files[0].buffer], files[0].name, { type: files[0].type });
                 const scanned = await projectImportService.scanZipFile(zipFile);
                 if (scanned.length > 0) {
@@ -259,9 +259,9 @@ const ShareTargetModal: React.FC<ShareTargetModalProps> = ({
                     </div>
                 ))}
             </div>
-            {isTexlyreStructuredZip ? (
+            {isChouTexStructuredZip ? (
                 <div className="info-message" style={{ marginTop: '0.75rem' }}>
-                    <p>{t('TeXlyre project archive detected. Projects will be imported using their original names.')}</p>
+                    <p>{t('chouTex project archive detected. Projects will be imported using their original names.')}</p>
                 </div>
             ) : (
                 <>
@@ -300,7 +300,7 @@ const ShareTargetModal: React.FC<ShareTargetModalProps> = ({
                 <button
                     className="button primary"
                     onClick={handleCreateNew}
-                    disabled={(!isTexlyreStructuredZip && !newProjectName.trim()) || isSubmitting}
+                    disabled={(!isChouTexStructuredZip && !newProjectName.trim()) || isSubmitting}
                 >
                     {isSubmitting ? t('Creating...') : t('Create Project')}
                 </button>

@@ -60,7 +60,7 @@ const TemplateImportModal: React.FC<TemplateImportModalProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
-  const [templatesApiUrl, setTemplatesApiUrl] = useState('https://texlyre.github.io/texlyre-templates/api/templates.json');
+  const [templatesApiUrl, setTemplatesApiUrl] = useState('https://choutex.github.io/choutex-templates/api/templates.json');
   const [templatesPerPage, setTemplatesPerPage] = useState(12);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ const TemplateImportModal: React.FC<TemplateImportModalProps> = ({
     settingsRegistered.current = true;
 
     const initialUrl = getSetting('templates-api-url')?.value as string ??
-      'https://texlyre.github.io/texlyre-templates/api/templates.json';
+      'https://choutex.github.io/choutex-templates/api/templates.json';
     const initialPerPage = getSetting('templates-per-page')?.value as number ?? 12;
 
     setTemplatesApiUrl(initialUrl);

@@ -116,7 +116,7 @@ class CollabService {
 		containerId: string,
 	): { doc: Y.Doc; provider: null } {
 		const doc = new Y.Doc();
-		const dbName = `texlyre-project-${docId}`;
+		const dbName = `choutex-project-${docId}`;
 		const persistenceName = `${dbName}-${collectionName}`;
 
 		const persistence = new IndexeddbPersistence(persistenceName, doc);
@@ -144,7 +144,7 @@ class CollabService {
 		options?: CollabConnectOptions,
 	): { doc: Y.Doc; provider: CollabProvider } {
 		const doc = new Y.Doc();
-		const dbName = `texlyre-project-${docId}`;
+		const dbName = `choutex-project-${docId}`;
 		const persistenceName = `${dbName}-${collectionName}`;
 		const roomName = `${docId}-${collectionName}`;
 
@@ -330,7 +330,7 @@ class CollabService {
 			: yjsUrl.replace(/[^a-zA-Z0-9]/g, '-');
 
 		const doc = new Y.Doc();
-		const persistenceName = `texlyre-project-${projectId}-yjs_metadata`;
+		const persistenceName = `choutex-project-${projectId}-yjs_metadata`;
 		const persistence = new IndexeddbPersistence(persistenceName, doc);
 
 		try {
@@ -378,7 +378,7 @@ class CollabService {
 		}
 
 		try {
-			const metadataCollection = `texlyre-project-${projectId}-yjs_metadata`;
+			const metadataCollection = `choutex-project-${projectId}-yjs_metadata`;
 			const metadataDoc = new Y.Doc();
 			const metadataPersistence = new IndexeddbPersistence(
 				metadataCollection,

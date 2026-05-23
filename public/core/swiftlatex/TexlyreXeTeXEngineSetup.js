@@ -1,7 +1,7 @@
-// public/TexlyreXeTeXEngineSetup.js
+// public/ChouTexXeTeXEngineSetup.js
 (function () {
   // Set the path for the engine - this must match where the file is actually located
-  window.ENGINE_PATH = './core/swiftlatex/texlyrexetex.js';
+  window.ENGINE_PATH = './core/swiftlatex/choutexxetex.js';
 
   // Load the XeTeXEngine script dynamically
   const script = document.createElement('script');

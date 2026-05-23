@@ -489,7 +489,7 @@ const BackupModal: React.FC<BackupModalProps> = ({
           <div className="backup-info">
             <h3>{t('How File System Backup Works')}</h3>
             <div className="info-content">
-              <p>{t('File system backup creates a copy of your local TeXlyre data on your PC that you can sync with cloud storage:')}
+              <p>{t('File system backup creates a copy of your local chouTex data on your PC that you can sync with cloud storage:')}
 
 
               </p>

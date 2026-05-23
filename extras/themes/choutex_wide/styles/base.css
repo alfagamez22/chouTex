@@ -1,0 +1,81 @@
+/* extras/themes/choutex_wide/styles/base.css */
+[data-theme-plugin="choutex"] {
+	--choutex-font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	--choutex-code-font-family: "Fira Code", "Courier New", monospace;
+	--project-title-width: 460px;
+
+	--choutex-spacing-xs: 0.25rem;
+	--choutex-spacing-sm: 0.5rem;
+	--choutex-spacing-md: 1rem;
+	--choutex-spacing-lg: 1.5rem;
+	--choutex-spacing-xl: 2rem;
+
+	--choutex-radius-sm: 4px;
+	--choutex-radius-md: 8px;
+	--choutex-radius-lg: 12px;
+	--choutex-radius-xl: 16px;
+
+	--choutex-transition-fast: 0.15s ease;
+	--choutex-transition-normal: 0.25s ease;
+	--choutex-transition-slow: 0.4s ease;
+
+	--choutex-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+	--choutex-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+	--choutex-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+	--choutex-z-index-dropdown: 1000;
+	--choutex-z-index-sticky: 1010;
+	--choutex-z-index-fixed: 1020;
+	--choutex-z-index-modal: 1030;
+	--choutex-z-index-popup: 1040;
+	--choutex-z-index-tooltip: 1050;
+
+	font-family: var(--choutex-font-family);
+}
+
+[data-theme-plugin="choutex"] .read-the-docs {
+	display: inline-block;
+	padding: var(--choutex-spacing-xs) var(--choutex-spacing-sm);
+	border-radius: var(--choutex-radius-md);
+	font-size: var(--space-sd);
+	background-color: var(--accent-background);
+	transition: all var(--choutex-transition-normal);
+	color: var(--text-color);
+	margin-bottom: 0.3em;
+	line-height: 0.5;
+}
+
+[data-theme-plugin="choutex"] .read-the-docs:hover {
+	background-color: var(--pico-primary-focus);
+	color: var(--pico-secondary);
+}
+
+[data-theme-plugin="choutex"] button {
+	border-radius: var(--choutex-radius-md);
+	transition: all var(--choutex-transition-fast);
+	font-weight: 500;
+	color: var(--text-color);
+}
+
+[data-theme-plugin="choutex"] *:focus-visible {
+	outline: 2px solid var(--pico-primary);
+	outline-offset: 2px;
+}
+
+
+[data-theme-plugin="choutex"] ::-webkit-scrollbar {
+	width: 8px;
+}
+
+[data-theme-plugin="choutex"] ::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+[data-theme-plugin="choutex"] ::-webkit-scrollbar-thumb {
+	background-color: var(--accent-border);
+	border-radius: 4px;
+}
+
+[data-theme-plugin="choutex"] ::-webkit-scrollbar-thumb:hover {
+	background-color: var(--pico-primary);
+}

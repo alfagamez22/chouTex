@@ -195,7 +195,7 @@ describe('SwiftLaTeXService', () => {
     describe('clearCache', () => {
         it('deletes only files under temporary cache paths', async () => {
             (fileStorageService.getAllFiles as jest.Mock).mockResolvedValue([
-                makeFileNode({ id: 'cache-1', path: '/.texlyre_cache/__tex/main.aux' }),
+                makeFileNode({ id: 'cache-1', path: '/.choutex_cache/__tex/main.aux' }),
                 makeFileNode({ id: 'src-1', path: '/main.tex' }),
             ]);
 

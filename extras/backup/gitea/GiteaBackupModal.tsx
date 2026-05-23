@@ -339,7 +339,7 @@ const GiteaBackupModal: React.FC<GiteaBackupModalProps> = ({
     const getDefaultCommitMessagePlaceholder = (): string => {
         const template =
             (getSetting('gitea-backup-default-commit-message')?.value as string) ||
-            'TeXlyre Backup: {date}';
+            'chouTex Backup: {date}';
         return replaceCommitMessageVariables(template);
     };
 
@@ -391,7 +391,7 @@ const GiteaBackupModal: React.FC<GiteaBackupModalProps> = ({
                                     </div>
                                     <br />
                                     <a
-                                        href="https://texlyre.github.io/docs/integrations/gitea"
+                                        href="https://choutex.github.io/docs/integrations/gitea"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="dropdown-link">
@@ -660,7 +660,7 @@ const GiteaBackupModal: React.FC<GiteaBackupModalProps> = ({
                             <div className="backup-info">
                                 <h3>{t('How Gitea Backup Works')}</h3>
                                 <div className="info-content">
-                                    <p>{t('Gitea backup stores your TeXlyre data in a Gitea repository:')}</p>
+                                    <p>{t('Gitea backup stores your chouTex data in a Gitea repository:')}</p>
                                     <ul>
                                         <li>
                                             <strong>{t('Push: ')}</strong>&nbsp;{t('Pushes local changes to the repository')}
@@ -672,7 +672,7 @@ const GiteaBackupModal: React.FC<GiteaBackupModalProps> = ({
                                             <strong>{t('Change repo/branch:')}</strong>&nbsp;{t('Click the branch icon to switch repository/branch')}
                                         </li>
                                         <li>{t('Each project is stored in a separate folder with documents and files organized')}</li>
-                                        <li>{t('Your Gitea token is encrypted and stored securely with your TeXlyre password')}</li>
+                                        <li>{t('Your Gitea token is encrypted and stored securely with your chouTex password')}</li>
                                         <li>{t('Repository and branch selection is remembered per project scope for convenience')}</li>
                                         <li>{t('Use private repositories to keep your data secure')}</li>
                                     </ul>

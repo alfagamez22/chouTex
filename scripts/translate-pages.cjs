@@ -83,7 +83,7 @@ function main() {
 
     } else {
         console.log(`
-TeXlyre Translation Tool
+ChouTeX Translation Tool
 
 Usage:
   node scripts/translate-pages.cjs detect [sourceDir] [outputFile]

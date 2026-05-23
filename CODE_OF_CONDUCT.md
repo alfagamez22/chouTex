@@ -4,6 +4,6 @@ This project follows the [Contributor Covenant](https://www.contributor-covenant
 
 By participating, you agree to uphold a respectful and constructive environment.
 
-Violations can be reported to [contact@texlyre.org].
+Violations can be reported to [contact@choutex.org].
 
 Maintainers reserve the right to close, lock, or delete issues that violate this code.

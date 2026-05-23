@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.join(__dirname, '..');
 
 async function loadConfig() {
-    const configPath = path.join(rootDir, 'texlyre.config.ts');
+    const configPath = path.join(rootDir, 'choutex.config.ts');
     // Convert to file:// URL for Windows compatibility
     const fileUrl = new URL(`file://${configPath}`).href;
     const { default: config } = await import(fileUrl);
@@ -50,12 +50,12 @@ function copyAndFixPlugins(srcDir, destDir) {
 }
 
 async function generatePluginsIndex() {
-    const texlyreConfig = await loadConfig();
+    const choutexConfig = await loadConfig();
 
     const imports = [];
     const exports = [];
     const pluginsByType = {};
-    const allPluginTypes = Object.keys(texlyreConfig.plugins);
+    const allPluginTypes = Object.keys(choutexConfig.plugins);
 
     const srcPluginsDir = path.join(rootDir, 'src', 'plugins');
     const rootExtrasDir = path.join(rootDir, 'extras');
@@ -65,7 +65,7 @@ async function generatePluginsIndex() {
     console.log('Copying extras to src/plugins and fixing import paths...');
     copyAndFixPlugins(rootExtrasDir, srcPluginsDir);
 
-    for (const [pluginType, pluginsList] of Object.entries(texlyreConfig.plugins)) {
+    for (const [pluginType, pluginsList] of Object.entries(choutexConfig.plugins)) {
         for (const pluginName of pluginsList) {
             const pluginPath = `${pluginType}/${pluginName}`;
             const pluginVarName = `${pluginName}${pluginType.charAt(0).toUpperCase() + pluginType.slice(1)}Plugin`;

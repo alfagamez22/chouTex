@@ -339,7 +339,7 @@ const ForgejoBackupModal: React.FC<ForgejoBackupModalProps> = ({
     const getDefaultCommitMessagePlaceholder = (): string => {
         const template =
             (getSetting('forgejo-backup-default-commit-message')?.value as string) ||
-            'TeXlyre Backup: {date}';
+            'chouTex Backup: {date}';
         return replaceCommitMessageVariables(template);
     };
 
@@ -391,7 +391,7 @@ const ForgejoBackupModal: React.FC<ForgejoBackupModalProps> = ({
                                     </div>
                                     <br />
                                     <a
-                                        href="https://texlyre.github.io/docs/integrations/codeberg"
+                                        href="https://choutex.github.io/docs/integrations/codeberg"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="dropdown-link">
@@ -660,7 +660,7 @@ const ForgejoBackupModal: React.FC<ForgejoBackupModalProps> = ({
                             <div className="backup-info">
                                 <h3>{t('How Forgejo Backup Works')}</h3>
                                 <div className="info-content">
-                                    <p>{t('Forgejo backup stores your TeXlyre data in a Forgejo repository:')}</p>
+                                    <p>{t('Forgejo backup stores your chouTex data in a Forgejo repository:')}</p>
                                     <ul>
                                         <li>
                                             <strong>{t('Push: ')}</strong>&nbsp;{t('Pushes local changes to the repository')}
@@ -672,7 +672,7 @@ const ForgejoBackupModal: React.FC<ForgejoBackupModalProps> = ({
                                             <strong>{t('Change repo/branch:')}</strong>&nbsp;{t('Click the branch icon to switch repository/branch')}
                                         </li>
                                         <li>{t('Each project is stored in a separate folder with documents and files organized')}</li>
-                                        <li>{t('Your Forgejo token is encrypted and stored securely with your TeXlyre password')}</li>
+                                        <li>{t('Your Forgejo token is encrypted and stored securely with your chouTex password')}</li>
                                         <li>{t('Repository and branch selection is remembered per project scope for convenience')}</li>
                                         <li>{t('Use private repositories to keep your data secure')}</li>
                                     </ul>

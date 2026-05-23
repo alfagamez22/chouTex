@@ -338,7 +338,7 @@ const GitHubBackupModal: React.FC<GitHubBackupModalProps> = ({
   const getDefaultCommitMessagePlaceholder = (): string => {
     const template =
       (getSetting('github-backup-default-commit-message')?.value as string) ||
-      'TeXlyre Backup: {date}';
+      'chouTex Backup: {date}';
     return replaceCommitMessageVariables(template);
   };
 
@@ -385,7 +385,7 @@ const GitHubBackupModal: React.FC<GitHubBackupModalProps> = ({
                   </div>
                   <br />
                   <a
-                    href="https://texlyre.github.io/docs/integrations/github"
+                    href="https://choutex.github.io/docs/integrations/github"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="dropdown-link">
@@ -634,7 +634,7 @@ const GitHubBackupModal: React.FC<GitHubBackupModalProps> = ({
               <div className="backup-info">
                 <h3>{t('How GitHub Backup Works')}</h3>
                 <div className="info-content">
-                  <p>{t('GitHub backup stores your TeXlyre data in a GitHub repository:')}</p>
+                  <p>{t('GitHub backup stores your chouTex data in a GitHub repository:')}</p>
                   <ul>
                     <li>
                       <strong>{t('Push: ')}</strong>&nbsp;{t('Pushes local changes to the repository')}
@@ -646,7 +646,7 @@ const GitHubBackupModal: React.FC<GitHubBackupModalProps> = ({
                       <strong>{t('Change repo/branch:')}</strong>&nbsp;{t('Click the branch icon to switch repository/branch')}
                     </li>
                     <li>{t('Each project is stored in a separate folder with documents and files organized')}</li>
-                    <li>{t('Your GitHub token is encrypted and stored securely with your TeXlyre password')}</li>
+                    <li>{t('Your GitHub token is encrypted and stored securely with your chouTex password')}</li>
                     <li>{t('Repository and branch selection is remembered per project scope for convenience')}</li>
                     <li>{t('Use private repositories to keep your data secure')}</li>
                   </ul>

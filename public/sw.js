@@ -1,6 +1,6 @@
 // These constants are automatically generated. Do not edit directly. **
-const CACHE_NAME = `texlyre-v0.7.19`;
-const BASE_PATH = '/texlyre/';
+const CACHE_NAME = `choutex-v0.7.19`;
+const BASE_PATH = '/choutex/';
 const FONTS_CACHE_NAME = 'fonts-cache-v1';
 // *** End automatic generation ***
 
@@ -14,7 +14,7 @@ const CACHE_MAX_AGE = {
   [FONTS_CACHE_NAME]: 60 * 60 * 24 * 365 * 1000,
 };
 
-const SHARE_TARGET_DB = 'texlyre-share-target';
+const SHARE_TARGET_DB = 'choutex-share-target';
 const SHARE_TARGET_STORE = 'pending-shares';
 
 function openShareDb() {

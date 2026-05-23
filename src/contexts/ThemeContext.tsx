@@ -42,7 +42,7 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
-  defaultThemeId = 'texlyre-theme',
+  defaultThemeId = 'choutex-theme',
   defaultVariant = 'dark'
 }) => {
   const [availableThemes, setAvailableThemes] = useState<ThemePlugin[]>([]);

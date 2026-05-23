@@ -344,7 +344,7 @@ const GitLabBackupModal: React.FC<GitLabBackupModalProps> = ({
     const getDefaultCommitMessagePlaceholder = (): string => {
         const template =
             (getSetting('gitlab-backup-default-commit-message')?.value as string) ||
-            'TeXlyre Backup: {date}';
+            'chouTex Backup: {date}';
         return replaceCommitMessageVariables(template);
     };
 
@@ -396,7 +396,7 @@ const GitLabBackupModal: React.FC<GitLabBackupModalProps> = ({
                                     </div>
                                     <br />
                                     <a
-                                        href="https://texlyre.github.io/docs/integrations/gitlab"
+                                        href="https://choutex.github.io/docs/integrations/gitlab"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="dropdown-link">
@@ -666,7 +666,7 @@ const GitLabBackupModal: React.FC<GitLabBackupModalProps> = ({
                             <div className="backup-info">
                                 <h3>{t('How GitLab Backup Works')}</h3>
                                 <div className="info-content">
-                                    <p>{t('GitLab backup stores your TeXlyre data in a GitLab repository:')}</p>
+                                    <p>{t('GitLab backup stores your chouTex data in a GitLab repository:')}</p>
                                     <ul>
                                         <li>
                                             <strong>{t('Push: ')}</strong>&nbsp;{t('Pushes local changes to the repository')}
@@ -678,7 +678,7 @@ const GitLabBackupModal: React.FC<GitLabBackupModalProps> = ({
                                             <strong>{t('Change repo/branch:')}</strong>&nbsp;{t('Click the branch icon to switch repository/branch')}
                                         </li>
                                         <li>{t('Each project is stored in a separate folder with documents and files organized')}</li>
-                                        <li>{t('Your GitLab token is encrypted and stored securely with your TeXlyre password')}</li>
+                                        <li>{t('Your GitLab token is encrypted and stored securely with your chouTex password')}</li>
                                         <li>{t('Repository and branch selection is remembered per project scope for convenience')}</li>
                                         <li>{t('Use private repositories to keep your data secure')}</li>
                                     </ul>

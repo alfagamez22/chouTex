@@ -28,7 +28,7 @@ export const fileStorageEventEmitter = {
 
 class FileStorageService {
 	public db: IDBPDatabase | null = null;
-	private readonly DB_PREFIX = 'texlyre-project-';
+	private readonly DB_PREFIX = 'choutex-project-';
 	private readonly FILES_STORE = 'files';
 	private readonly DB_VERSION = 1;
 	private projectId = '';

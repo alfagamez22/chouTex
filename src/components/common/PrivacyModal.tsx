@@ -20,7 +20,7 @@ const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) => {
       size="medium">
 
       <div className="privacy-content">
-        <h3>{t('How TeXlyre Works')}</h3>
+        <h3>{t('How chouTex Works')}</h3>
         <ul>
           <li><strong>{t('Local Storage:')}</strong>&nbsp;{t('Your projects and account data stay in your browser')}</li>
           <li><strong>{t('Real-time Collaboration:')}</strong>&nbsp;{t('Direct peer-to-peer connections via signaling servers')}</li>
@@ -42,9 +42,9 @@ const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) => {
         </p>
 
         <h3>{t('Open Infrastructure')}</h3>
-        <p>{t('TeXlyre uses open source signaling servers. The server code is available on')}
+        <p>{t('chouTex uses open source signaling servers. The server code is available on')}
           {' '}
-          <a href="https://github.com/texlyre/texlyre-infrastructure" target="_blank" rel="noreferrer">{t('GitHub')}
+          <a href="https://github.com/choutex/choutex-infrastructure" target="_blank" rel="noreferrer">{t('GitHub')}
 
           </a>.
         </p>
@@ -68,12 +68,12 @@ const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) => {
           <li><strong>{t('Zotero API:')}</strong>&nbsp;{t('When you enable Zotero integration with your own API key (')}<a href="https://www.zotero.org/support/privacy" target="_blank" rel="noreferrer">{t('Privacy Policy')}</a>)</li>
           <li><strong>{t('OpenAlex API:')}</strong>&nbsp;{t('Search queries and, if provided, your email (mailto) and API key when using the OpenAlex integration (')}<a href="https://openalex.org/OpenAlex_privacy_policy.pdf" target="_blank" rel="noreferrer">{t('Privacy Policy')}</a>)</li>
         </ul>
-        <p>{t('TeXlyre is hosted on')}
+        <p>{t('chouTex is hosted on')}
           &nbsp;<a href="https://pages.github.com/" target="_blank" rel="noreferrer">{t('GitHub Pages')}</a>&nbsp;{t('and uses')}&nbsp;<a href="https://workers.cloudflare.com/" target="_blank" rel="noreferrer">{t('Cloudflare Workers')}</a>&nbsp;{t('for signaling and download servers. These services may set their own cookies for security and performance purposes.')}
 
         </p>
         <p>
-          <strong>{t('TeXlyre itself doesn\'t use any cookies')}</strong>&nbsp;{t('- we only use local browser storage to save your projects on your device.')}
+          <strong>{t('chouTex itself doesn\'t use any cookies')}</strong>&nbsp;{t('- we only use local browser storage to save your projects on your device.')}
 
         </p>
 
@@ -82,7 +82,7 @@ const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) => {
         </p>
         <div className="contact-info">
           <p><strong>{t('Questions?')}</strong>
-            <a href="https://github.com/texlyre/texlyre/issues" target="_blank" rel="noreferrer">&nbsp;{t('Open an issue on our GitHub repository')}
+            <a href="https://github.com/choutex/choutex/issues" target="_blank" rel="noreferrer">&nbsp;{t('Open an issue on our GitHub repository')}
 
             </a>.
           </p>

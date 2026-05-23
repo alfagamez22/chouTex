@@ -99,10 +99,10 @@ class ContentFormatterService {
     }
 
     private areNotificationsEnabled(type?: 'latex' | 'typst'): boolean {
-        const userId = localStorage.getItem('texlyre-current-user');
+        const userId = localStorage.getItem('choutex-current-user');
         const storageKey = userId
-            ? `texlyre-user-${userId}-settings`
-            : 'texlyre-settings';
+            ? `choutex-user-${userId}-settings`
+            : 'choutex-settings';
         try {
             const settings = JSON.parse(localStorage.getItem(storageKey) || '{}');
             if (type === 'latex') {

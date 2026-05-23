@@ -46,8 +46,8 @@ class LaTeXSourceMapService implements SourceMapService {
     }
 
     private isSourceMapEnabled(): boolean {
-        const userId = localStorage.getItem('texlyre-current-user');
-        const storageKey = userId ? `texlyre-user-${userId}-settings` : 'texlyre-settings';
+        const userId = localStorage.getItem('choutex-current-user');
+        const storageKey = userId ? `choutex-user-${userId}-settings` : 'choutex-settings';
         try {
             const settings = JSON.parse(localStorage.getItem(storageKey) || '{}');
             return settings['latex-sourcemap-enabled'] !== false;

@@ -85,7 +85,7 @@ const TypesetterInfo: React.FC<TypesetterInfoProps> = ({ type }) => {
             </ul>
           </div>
           <div className="typesetter-tooltip-section">
-            <strong>{t('LaTeX Engine:')}</strong> {t('BusyTeX: texlyre-busytex v1.1.1 (TeX Live 2026, 01/03/2026)')}
+            <strong>{t('LaTeX Engine:')}</strong> {t('BusyTeX: choutex-busytex v1.1.1 (TeX Live 2026, 01/03/2026)')}
             <br />
             <strong>{t('LaTeX Compilers:')}</strong>
             <ul>
@@ -108,10 +108,10 @@ const TypesetterInfo: React.FC<TypesetterInfoProps> = ({ type }) => {
           <strong>{t('Typst Engine:')}</strong> {t('@myriaddreamin/typst.ts v0.7.0-rc2')}
         </div>
         <div className="typesetter-tooltip-section">
-          <strong>{t('Typst Renderer:')}</strong> {t('@texlyre/typst-ts-renderer v0.7.0-rc2')}
+          <strong>{t('Typst Renderer:')}</strong> {t('@choutex/typst-ts-renderer v0.7.0-rc2')}
         </div>
         <div className="typesetter-tooltip-section">
-          <strong>{t('Typst Compiler:')}</strong> {t('@texlyre/typst-ts-compiler v0.7.0-rc2')}
+          <strong>{t('Typst Compiler:')}</strong> {t('@choutex/typst-ts-compiler v0.7.0-rc2')}
         </div>
         <div className="typesetter-tooltip-section">
           <strong>{t('Typst Version:')}</strong> {t('0.14.2 (12/12/2025)')}

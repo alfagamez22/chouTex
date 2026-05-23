@@ -92,14 +92,14 @@ const DeleteAccountModal: React.FC<DeleteAccountModalProps> = ({
     await tx.done;
 
     // Clean up localStorage
-    const userSettingsKey = `texlyre-user-${userId}-settings`;
-    const userPropertiesKey = `texlyre-user-${userId}-properties`;
-    const userSecretsKey = `texlyre-user-${userId}-secrets`;
+    const userSettingsKey = `choutex-user-${userId}-settings`;
+    const userPropertiesKey = `choutex-user-${userId}-properties`;
+    const userSecretsKey = `choutex-user-${userId}-secrets`;
 
     localStorage.removeItem(userSettingsKey);
     localStorage.removeItem(userPropertiesKey);
     localStorage.removeItem(userSecretsKey);
-    localStorage.removeItem('texlyre-current-user');
+    localStorage.removeItem('choutex-current-user');
 
     console.log(t('Successfully deleted account for user: {userId}', { userId }));
   };

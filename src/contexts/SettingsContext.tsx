@@ -96,12 +96,12 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
 	const isLocalStorageLoaded = useRef(false);
 
 	const getCurrentUserId = useCallback((): string | null => {
-		return localStorage.getItem('texlyre-current-user');
+		return localStorage.getItem('choutex-current-user');
 	}, []);
 
 	const getStorageKey = useCallback((): string => {
 		const userId = getCurrentUserId();
-		return userId ? `texlyre-user-${userId}-settings` : 'texlyre-settings';
+		return userId ? `choutex-user-${userId}-settings` : 'choutex-settings';
 	}, [getCurrentUserId]);
 
 	const loadStoredValue = useCallback((setting: Setting): unknown => {
@@ -149,9 +149,9 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
 	useEffect(() => {
 		const userId = getCurrentUserId();
 		const userStorageKey = userId
-			? `texlyre-user-${userId}-settings`
-			: 'texlyre-settings';
-		const globalStorageKey = 'texlyre-settings';
+			? `choutex-user-${userId}-settings`
+			: 'choutex-settings';
+		const globalStorageKey = 'choutex-settings';
 
 		try {
 			const globalSettings = localStorage.getItem(globalStorageKey);
@@ -233,7 +233,7 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
 
 	const batchGetSettings = useCallback((ids: string[]): Record<string, unknown> => {
 		const userId = getCurrentUserId();
-		const storageKey = userId ? `texlyre-user-${userId}-settings` : 'texlyre-settings';
+		const storageKey = userId ? `choutex-user-${userId}-settings` : 'choutex-settings';
 
 		try {
 			const stored = localStorage.getItem(storageKey);

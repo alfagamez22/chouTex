@@ -1,13 +1,13 @@
 {
-	"name": "texlyre",
+	"name": "choutex",
 	"private": true,
 	"version": "0.7.19",
-	"description": "A local-first LaTeX & Typst collaborative web editor ",
+	"description": "A local-first LaTeX & Typst collaborative web editor (chouTex)",
 	"author": "Fares Abawi <fares@abawi.me> (https://abawi.me)",
 	"license": "AGPL-3.0-or-later",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/texlyre/texlyre.git"
+		"url": "https://github.com/choutex/choutex.git"
 	},
 	"type": "module",
 	"engines": {

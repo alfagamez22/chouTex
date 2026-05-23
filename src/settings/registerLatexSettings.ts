@@ -3,7 +3,7 @@ import { t } from '@/i18n';
 import { useEffect, useRef } from 'react';
 
 import { useSettings } from '../hooks/useSettings';
-import { BUSYTEX_BUNDLE_LABELS } from '../extensions/texlyre-busytex/BusyTeXService';
+import { BUSYTEX_BUNDLE_LABELS } from '../extensions/choutex-busytex/BusyTeXService';
 import type { LaTeXOutputFormat, LaTeXEngine } from '../types/latex';
 
 export function useRegisterLatexSettings() {
